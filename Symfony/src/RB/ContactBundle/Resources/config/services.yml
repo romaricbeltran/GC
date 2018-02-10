@@ -1,0 +1,4 @@
+services:
+#    rb_contact.example:
+#        class: RB\ContactBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

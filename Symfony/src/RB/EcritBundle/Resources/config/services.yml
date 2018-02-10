@@ -1,0 +1,4 @@
+services:
+#    rb_ecrit.example:
+#        class: RB\EcritBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

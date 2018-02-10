@@ -1,0 +1,44 @@
+{# Cette  est une extension de layout.html.twig, en ouvrant les blocks définis dans la  mère on peut spécifier le code #}
+
+{% extends "CoreBundle::layout.html.twig" %}
+
+
+    {# Exemple : on ouvre le block "titre", le titre pour cette  est "Accueil - Genevieve Cornu" #}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+Accueil
+
+Photo de Genevieve et citation
+
+ <a href="{{path ('RB_parcours_home')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Parcours
+</a>
+
+ <a href="{{path ('RB_oeuvre_home')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Oeuvres
+</a>
+
+ <a href="{{path ('RB_ecrit_home')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Ecrits
+</a>
+
+ <a href="{{path ('RB_actualite_home')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Actualité
+</a>
+
+ <a href="{{path ('RB_contact_home')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Contact
+</a>
+
+
+{% endblock %}

@@ -1,3 +1,23 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+core:
+    resource: "@CoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+rb_oeuvre:
+    resource: "@RBOeuvreBundle/Resources/config/routing.yml"
+    prefix:   /oeuvre
+
+rb_ecrit:
+    resource: "@RBEcritBundle/Resources/config/routing.yml"
+    prefix:   /ecrit
+
+rb_parcours:
+    resource: "@RBParcoursBundle/Resources/config/routing.yml"
+    prefix:   /parcours
+
+rb_contact:
+    resource: "@RBContactBundle/Resources/config/routing.yml"
+    prefix:   /contact
+
+rb_actualite:
+    resource: "@RBActualiteBundle/Resources/config/routing.yml"
+    prefix:   /actualite

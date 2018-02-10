@@ -1,0 +1,52 @@
+    {# Racine Html, tout ce qui est ici est commun à toutes les pages. #}
+    {# Les blocks peuvent être complétés dans les pages filles. #}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}Genevieve Cornu{% endblock %}</title>
+
+  {% block stylesheets %}
+    
+    {# Inclure le css ici si il impacte l'ensemble du site #}
+
+  {% endblock %}
+
+</head>
+
+<body>
+
+      <h1>Genevieve Cornu</h1>
+      <p>
+        Bienvenue ! Naissance du site de Genevieve Cornu.
+      </p>
+
+
+
+
+
+    {% block body %}
+    {% endblock %}
+
+
+
+<footer>
+  <p>Romaric BELTRAN & Diana PORTELA © {{ 'now'|date('Y') }}</p>
+</footer>
+
+
+{% block javascripts %}
+
+  {# Inclure le js ici si il impacte l'ensemble du site #}
+
+{% endblock %}
+
+</body>
+
+</html>

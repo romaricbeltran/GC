@@ -1,9 +1,9 @@
 <?php
 
-namespace AppBundle;
+namespace RB\EcritBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class RBEcritBundle extends Bundle
 {
 }

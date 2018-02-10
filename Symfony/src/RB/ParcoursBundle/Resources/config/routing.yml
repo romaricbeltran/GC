@@ -1,0 +1,3 @@
+RB_parcours_home:
+    path:     /
+    defaults: { _controller: RBParcoursBundle:Parcours:index }

@@ -1,0 +1,3 @@
+RB_contact_home:
+    path:     /
+    defaults: { _controller: RBContactBundle:Contact:index }
