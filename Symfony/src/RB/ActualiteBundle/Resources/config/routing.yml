@@ -1,3 +1,0 @@
-RB_actualite_home:
-    path:     /
-    defaults: { _controller: RBActualiteBundle:Actualite:index }

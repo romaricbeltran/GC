@@ -17,7 +17,3 @@ rb_parcours:
 rb_contact:
     resource: "@RBContactBundle/Resources/config/routing.yml"
     prefix:   /contact
-
-rb_actualite:
-    resource: "@RBActualiteBundle/Resources/config/routing.yml"
-    prefix:   /actualite
