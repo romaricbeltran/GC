@@ -1,3 +1,0 @@
-RB_oeuvre_home:
-    path:     /
-    defaults: { _controller: RBOeuvreBundle:Oeuvre:index }

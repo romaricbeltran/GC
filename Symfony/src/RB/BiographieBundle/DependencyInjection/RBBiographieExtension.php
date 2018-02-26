@@ -1,6 +1,6 @@
 <?php
 
-namespace RB\OeuvreBundle\DependencyInjection;
+namespace RB\BiographieBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class RBOeuvreExtension extends Extension
+class RBBiographieExtension extends Extension
 {
     /**
      * {@inheritdoc}

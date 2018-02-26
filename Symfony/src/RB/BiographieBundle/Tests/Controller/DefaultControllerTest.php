@@ -1,6 +1,6 @@
 <?php
 
-namespace RB\OeuvreBundle\Tests\Controller;
+namespace RB\BiographieBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

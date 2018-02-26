@@ -1,4 +1,4 @@
 services:
-#    rb_oeuvre.example:
-#        class: RB\OeuvreBundle\Example
+#    rb_biographie.example:
+#        class: RB\BiographieBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]

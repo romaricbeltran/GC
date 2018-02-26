@@ -16,10 +16,10 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new CoreBundle\CoreBundle(),
-            new RB\OeuvreBundle\RBOeuvreBundle(),
+            new RB\ParcoursBundle\RBParcoursBundle(),
             new RB\ContactBundle\RBContactBundle(),
             new RB\EcritBundle\RBEcritBundle(),
-            new RB\ParcoursBundle\RBParcoursBundle(),
+            new RB\BiographieBundle\RBBiographieBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
