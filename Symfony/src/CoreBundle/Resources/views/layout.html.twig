@@ -7,10 +7,15 @@
 
 <head>
 
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% block title %}Genevieve Cornu{% endblock %}</title>
+
+
+  {% include 'CoreBundle:Outils:header.html.twig' %}
+
 
   {% block stylesheets %}
     
@@ -18,16 +23,10 @@
 
   {% endblock %}
 
+
 </head>
 
 <body>
-
-      <h1>Genevieve Cornu</h1>
-      <p>
-        Bienvenue ! Naissance du site de Genevieve Cornu.
-      </p>
-
-
 
 
 
@@ -37,7 +36,10 @@
 
 
 <footer>
-  <p>Romaric BELTRAN & Diana PORTELA © {{ 'now'|date('Y') }}</p>
+
+  {% include 'CoreBundle:Outils:footer.html.twig' %}
+
+
 </footer>
 
 
