@@ -1,3 +1,4 @@
+{# Accueil #}
 {# Cette  est une extension de layout.html.twig, en ouvrant les blocks définis dans la  mère on peut spécifier le code #}
 
 {% extends "CoreBundle::layout.html.twig" %}
@@ -11,8 +12,36 @@
 
 {% block body %}
 
+{# Image d'accueil #}
 <img src="http://img.chefdentreprise.com/Img/FICHEPRATIQUE/2015/4/255263/travail-temporaire-necessite-intermediaire-agence-interim--F.jpg
 " alt="image_accueil" height="500" /></a>
+
+
+
+{# Extrait Biographie #}
+<p>
+<a href="{{path ('core_home')}}"><img src="{{ asset('bundles/core/Images/genevieve_cornu.jpg') }}" alt="genevieve_cornu" height="300" /></a>
+    La biographie de Genevieve blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+
+    <a href="{{path ('RB_biographie_home')}}"><button>Lire la suite</button>
+</p>
+
+{# Lien Parcours Pictural #}
+<p>
+<a href="{{path ('RB_parcours_home')}}"><img src="https://static.fnac-static.com/multimedia/Images/FR/NR/1d/f3/51/5370653/1507-1/tsp20140808193152/Parcours-pictural.jpg" alt="parcours_accueil" height="500" /></a>
+
+</p>
+
+
+{# Liens Ecrits #}
+<p>
+<a href="{{path ('RB_ecrit_home')}}"><img src="http://christopheforgeot.fr/wp-content/uploads/2014/04/Po%C3%A8mes..png" alt="ecrit_poeme_accueil" height="50" /></a>
+
+<a href="{{path ('RB_ecrit_home')}}"><img src="http://www.romans.co.uk/images/Romans_Logo.jpg" alt="ecrit_romans_accueil" height="50" /></a>
+
+<a href="{{path ('RB_ecrit_home')}}"><img src="http://valcreuse.fr/wp-content/uploads/2017/09/panneau-theorie.jpg" alt="ecrit_theorique_accueil" height="100" /></a>
+</p>
+
 
 
 
