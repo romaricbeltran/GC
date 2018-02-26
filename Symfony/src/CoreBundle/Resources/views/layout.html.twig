@@ -26,21 +26,19 @@
 
 </head>
 
+    {# A retirer après le css #}
+</br>
+
 <body>
 
 
 
     {% block body %}
+
     {% endblock %}
 
 
 
-<footer>
-
-  {% include 'CoreBundle:Outils:footer.html.twig' %}
-
-
-</footer>
 
 
 {% block javascripts %}
@@ -49,6 +47,20 @@
 
 {% endblock %}
 
+
+
 </body>
+
+
+    {# A retirer après le css #}
+</br>
+
+<footer>
+
+  {% include 'CoreBundle:Outils:footer.html.twig' %}
+
+
+</footer>
+
 
 </html>
