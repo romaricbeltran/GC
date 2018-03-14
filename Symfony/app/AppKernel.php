@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new RB\ContactBundle\RBContactBundle(),
             new RB\EcritBundle\RBEcritBundle(),
             new RB\BiographieBundle\RBBiographieBundle(),
+            new RB\UserBundle\RBUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
