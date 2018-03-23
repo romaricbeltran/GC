@@ -6,22 +6,42 @@ Geneviève Cornu
 
 Citation
 
- <a href="{{path ('RB_biographie_home')}}" class="btn btn-default">
+<a href="{{path ('RB_biographie_home')}}" class="btn btn-default">
     <i class="glyphicon glyphicon-chevron-right"></i>
     Biographie
 </a>
 
- <a href="{{path ('RB_parcours_home')}}" class="btn btn-default">
+<a href="{{path ('RB_parcours_home')}}" class="btn btn-default">
     <i class="glyphicon glyphicon-chevron-right"></i>
     Parcours Pictural
 </a>
 
- <a href="{{path ('RB_ecrit_home')}}" class="btn btn-default">
+<a href="{{path ('RB_ecrit_home')}}" class="btn btn-default">
     <i class="glyphicon glyphicon-chevron-right"></i>
     Ecrits
 </a>
 
- <a href="{{path ('RB_contact_home')}}" class="btn btn-default">
+<a href="{{path ('RB_contact_home')}}" class="btn btn-default">
     <i class="glyphicon glyphicon-chevron-right"></i>
     Contact
 </a>
+
+
+{# si anonyme #}
+
+{% if not is_granted('ROLE_ADMIN') %}
+<a href="{{path ('login')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Administration
+</a>
+{% endif %}
+
+{# si administrateur #}
+
+{% if is_granted('ROLE_ADMIN') %}
+<a href="{{path ('logout')}}" class="btn btn-default">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+    Se déconnecter
+</a>
+{% endif %}
+
