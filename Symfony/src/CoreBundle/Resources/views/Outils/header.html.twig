@@ -39,6 +39,10 @@ Citation
 {# si administrateur #}
 
 {% if is_granted('ROLE_ADMIN') %}
+    
+    Connecté en tant que {{ app.user.username }}
+    -
+
 <a href="{{path ('logout')}}" class="btn btn-default">
     <i class="glyphicon glyphicon-chevron-right"></i>
     Se déconnecter
