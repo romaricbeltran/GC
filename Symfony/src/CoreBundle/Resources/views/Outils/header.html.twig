@@ -27,15 +27,6 @@ Citation
 </a>
 
 
-{# si anonyme #}
-
-{% if not is_granted('ROLE_ADMIN') %}
-<a href="{{path ('login')}}" class="btn btn-default">
-    <i class="glyphicon glyphicon-chevron-right"></i>
-    Administration
-</a>
-{% endif %}
-
 {# si administrateur #}
 
 {% if is_granted('ROLE_ADMIN') %}
