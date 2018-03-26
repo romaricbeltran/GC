@@ -4,6 +4,13 @@
 
 {% block body %}
 
-<a href="{{ path('RB_parcours_vue_periode') }}">Parcours Pictural Periode 1...</a>
+<p>Parcours Pictural...</p>
+
+
+{% for image in images %}
+
+<img src="{{ asset('bundles/rbparcours/images/periode1/' ~ image.chemin ~ '') }}" alt="{{ image.alt }}" width="60">
+
+{% endfor %}
 
 {% endblock %}
