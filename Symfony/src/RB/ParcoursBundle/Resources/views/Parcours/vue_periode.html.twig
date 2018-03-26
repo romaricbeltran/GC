@@ -7,9 +7,9 @@
 <p>Parcours Pictural...</p>
 
 
-{% for image in images %}
+{% for oeuvre in oeuvre %}
 
-<img src="{{ asset('bundles/rbparcours/images/periode1/' ~ image.chemin ~ '') }}" alt="{{ image.alt }}" width="60">
+<img src="{{ asset('bundles/rbparcours/images/periode3/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}" width="60">
 
 {% endfor %}
 

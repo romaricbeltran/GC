@@ -6,6 +6,7 @@ namespace RB\ParcoursBundle\ORM;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use RB\ParcoursBundle\Entity\Image;
+use RB\ParcoursBundle\Entity\Oeuvre;
 
 class LoadImage implements FixtureInterface
 {
@@ -126,7 +127,12 @@ class LoadImage implements FixtureInterface
             $image1 = new Image();
             $image1->setChemin($cle1);
             $image1->setAlt($valeur1);
-            $manager->persist($image1);
+
+            $oeuvre1 = new Oeuvre();
+            $oeuvre1->setTitre($valeur1);
+            $oeuvre1->setImage($image1);
+
+            $manager->persist($oeuvre1);
         }
 
         foreach($images2 as $cle1 => $valeur1)
@@ -134,7 +140,12 @@ class LoadImage implements FixtureInterface
             $image2 = new Image();
             $image2->setChemin($cle1);
             $image2->setAlt($valeur1);
-            $manager->persist($image2);
+
+            $oeuvre2 = new Oeuvre();
+            $oeuvre2->setTitre($valeur1);
+            $oeuvre2->setImage($image2);
+            
+            $manager->persist($oeuvre2);
         }
 
         foreach($images3 as $cle1 => $valeur1)
@@ -142,7 +153,12 @@ class LoadImage implements FixtureInterface
             $image3 = new Image();
             $image3->setChemin($cle1);
             $image3->setAlt($valeur1);
-            $manager->persist($image3);
+
+            $oeuvre3 = new Oeuvre();
+            $oeuvre3->setTitre($valeur1);
+            $oeuvre3->setImage($image3);
+            
+            $manager->persist($oeuvre3);
         }
 
         foreach($images4 as $cle1 => $valeur1)
@@ -150,7 +166,12 @@ class LoadImage implements FixtureInterface
             $image4 = new Image();
             $image4->setChemin($cle1);
             $image4->setAlt($valeur1);
-            $manager->persist($image4);
+
+            $oeuvre4 = new Oeuvre();
+            $oeuvre4->setTitre($valeur1);
+            $oeuvre4->setImage($image4);
+            
+            $manager->persist($oeuvre4);
         }
 
         foreach($images5 as $cle1 => $valeur1)
@@ -158,7 +179,12 @@ class LoadImage implements FixtureInterface
             $image5 = new Image();
             $image5->setChemin($cle1);
             $image5->setAlt($valeur1);
-            $manager->persist($image5);
+
+            $oeuvre5 = new Oeuvre();
+            $oeuvre5->setTitre($valeur1);
+            $oeuvre5->setImage($image5);
+            
+            $manager->persist($oeuvre5);
         }
 
         foreach($images6 as $cle1 => $valeur1)
@@ -166,7 +192,12 @@ class LoadImage implements FixtureInterface
             $image6 = new Image();
             $image6->setChemin($cle1);
             $image6->setAlt($valeur1);
-            $manager->persist($image6);
+
+            $oeuvre6 = new Oeuvre();
+            $oeuvre6->setTitre($valeur1);
+            $oeuvre6->setImage($image6);
+            
+            $manager->persist($oeuvre6);
         }
 
         foreach($images7 as $cle1 => $valeur1)
@@ -174,7 +205,12 @@ class LoadImage implements FixtureInterface
             $image7 = new Image();
             $image7->setChemin($cle1);
             $image7->setAlt($valeur1);
-            $manager->persist($image7);
+
+            $oeuvre7 = new Oeuvre();
+            $oeuvre7->setTitre($valeur1);
+            $oeuvre7->setImage($image7);
+            
+            $manager->persist($oeuvre7);
         }        
         //on enregistre tout
         $manager->flush();

@@ -22,10 +22,10 @@ class ParcoursController extends Controller
     {
        $em = $this->getDoctrine()->getManager();
 
-       $images = $em->getRepository('RBParcoursBundle:Image')->findAll();
+       $oeuvres = $em->getRepository('RBParcoursBundle:Oeuvre')->findAll();
 
       return $this->render('RBParcoursBundle:Parcours:vue_periode.html.twig', array(
-          'images' => $images,
+          'oeuvre' => $oeuvres,
       ));
     }
 
