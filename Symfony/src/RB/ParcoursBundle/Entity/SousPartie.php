@@ -36,7 +36,7 @@ class SousPartie
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity="RB\ParcoursBundle\Entity\Periode", inversedBy="sousPartie")
+     * @ORM\ManyToOne(targetEntity="RB\ParcoursBundle\Entity\Periode", inversedBy="sousParties")
      * @ORM\JoinColumn(nullable=false)
      */
     private $periode;
