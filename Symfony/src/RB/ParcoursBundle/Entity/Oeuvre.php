@@ -22,8 +22,6 @@ class Oeuvre
     private $id;
 
     /**
-     * 
-     * 
      * @ORM\OneToOne(targetEntity="RB\ParcoursBundle\Entity\Image", cascade={"persist"})
      */
     private $image;
