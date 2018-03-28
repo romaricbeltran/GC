@@ -2,6 +2,7 @@
 
 namespace RB\ParcoursBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -29,13 +30,15 @@ class Periode
     private $titre;
 
     /**
-     * @var \DateTime|null
+     * @var string|null
      *
-     * @ORM\Column(name="date", type="date", nullable=true)
+     * @ORM\Column(name="date", type="string", nullable=true)
      */
     private $date;
     
     /**
+     * @var \DateTime|null
+     * 
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
     private $updatedAt;
