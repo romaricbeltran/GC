@@ -2,25 +2,19 @@
 
     <!----------------------- FOOTER ---------------------->
 
-                {{ asset('css/header_footer.css') }}
-                
+
+
         <!-- 3 colonnes -->
         <div class="column">
             <h3> Biographie </h3> </br>
                 <img src="{{ asset('bundles/core/Images/genevieve_cornu.jpg') }}" alt="Geneviève Cornu" height="60px"/>
                 <p> Je suis née en terre quercynoise. Mes poèmes et mes peintures s’en nourrissent, sites rupestres, eaux profondes, bêtes et gens, vision empreinte de tendresse. Je suis née de Paris, la ville qui m’a aidée à penser et à grandir. </p>
-                <a href=""> Lire la suite ... </a> </br>
+                <a href="{{path ('RB_biographie_home')}}"> Lire la suite ... </a> </br>
         </div>
 
         <div class="column">
             <h3> Parcours pictural </h3> </br>
-                <a href=""> Objets et surfaces </a> </br>
-                <a href=""> Recherche et structures </a> </br>
-                <a href=""> Ecritures - Signes </a> </br>
-                <a href=""> Dialogue de la Peinture et de la Poésie </a> </br>
-                <a href=""> Formes intuitives </a> </br>
-                <a href=""> Construction des objets mentaux </a> </br>
-                <a href=""> Narration fantastique </a> </br>
+            {{ render(controller("RBParcoursBundle:Parcours:menuPeriode", {'limit': 15})) }}
         </div>
 
         <div class="column">
@@ -33,11 +27,11 @@
 
         <!-- Mentions légales / Plan du site / Site réalisé par ... -->
         <div> </br></br>
-            <a href=""> Mentions légales </a>
+            <a href="{{path ('core_mention')}}"> Mentions légales </a>
         </div>
 
         <div> </br></br>
-            <a href=""> Plan du site </a>
+            <a href="{{path ('core_plan')}}"> Plan du site </a>
         </div>
 
 

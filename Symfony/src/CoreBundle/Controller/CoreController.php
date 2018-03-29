@@ -12,4 +12,16 @@ class CoreController extends Controller
     {
         return $this->render('CoreBundle:Core:index.html.twig');
     }
+
+    public function mentionsAction()
+    {
+        return $this->render('CoreBundle:Core:mentions.html.twig');
+    }
+
+    public function planAction()
+    {
+        return $this->render('CoreBundle:Core:plan.html.twig');
+    }
+
+
 }

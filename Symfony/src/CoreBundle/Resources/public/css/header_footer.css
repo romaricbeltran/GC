@@ -1,0 +1,148 @@
+/*
+*Author : Diana Portela
+*Email : diana.portela@outlook.fr
+
+*SOMMAIRE 
+*1. Typographie
+*2. Administrateur
+*3. Header
+*4. Footer
+*/
+
+
+/*============================ TYPOGRAPHIE ============================*/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+Sélecteur {
+    font-family: 'Dosis', sans-serif;
+}
+
+/* Appliquer la typographie à l'ensemble de la page */
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+/* H1, H2, p et a sur l'ensemble de la page */
+* h1 {
+    font-size: 40px;
+}
+
+* h2 {
+    font-size: 25px;
+}
+
+* p {
+    font-size: 15px;
+}
+
+* a {
+    font-size: 15px;
+}
+
+/* H3 sur footer uniquement */
+footer h3 {
+    font-size: 20px;
+}
+
+
+/*============================ ADMINISTRATEUR ============================*/
+
+.administrateur {
+    text-align: right;
+}
+
+
+/*============================ HEADER ============================*/
+
+/* Position */
+nav {
+    text-align: left; /* alignement horizontal à gauche */
+}
+
+nav ul {
+    list-style: none; /* enlever les puces */
+    display: inline-block; /* alignement horizontal */
+}
+
+nav li {
+    display: inline-block; /* alignement horizontal */
+}
+
+.menu {
+    margin-left: 550px;
+    margin-right: 50px;
+}
+
+.menu li {
+    padding-left: 70px;
+}
+
+
+/* Style logo (liens) */
+.logo a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Style menu (liens) */
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover  {
+    color: #993A74;
+}
+
+
+/*============================ FOOTER ============================*/
+
+/* Arrière plan */
+footer {
+    background-color: #98B0A8;
+    background-size: cover; /* l’image touche les 2 bords de la fenêtre */
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center; /* centrage horizontal */
+}
+
+
+/* Position */
+footer div {
+    display: inline-block; /* alignement horizontal */
+    padding-left: 80px;
+    padding-right: 80px;
+    vertical-align: top; /* alignement vertical vers le haut */
+}
+
+footer .column {
+    width: 20%; /* répartition des colonnes */
+}
+
+
+/* Style (liens) */
+footer div a {
+    color: black;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+footer div a:hover  {
+    color: #993A74;
+}
+
+
+/* Style Biographie : paragraphe */
+footer div p {
+    text-align: justify;
+}
+
+
+/* Style Biographie : Bordure image */
+footer div img {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #2B886B;
+}

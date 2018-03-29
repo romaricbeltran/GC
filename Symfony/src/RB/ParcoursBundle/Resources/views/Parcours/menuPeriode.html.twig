@@ -1,0 +1,4 @@
+
+{% for periode in periodes %}
+    <a href="{{ path('RB_parcours_vue_periode', {'id': periode.id}) }}"> {{ periode.titre }} </a> </br>
+{% endfor %}

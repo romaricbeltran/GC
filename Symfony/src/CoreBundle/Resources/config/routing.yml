@@ -1,3 +1,11 @@
 core_home:
     path:     /
     defaults: { _controller: CoreBundle:Core:index }
+
+core_mention:
+    path:     /mentions
+    defaults: { _controller: CoreBundle:Core:mentions }
+
+core_plan:
+    path:     /plan
+    defaults: { _controller: CoreBundle:Core:plan }

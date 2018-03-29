@@ -1,7 +1,11 @@
 {# head #}
-    <!----------------------- CSS ---------------------->
-                {{ asset('css/header_footer.css') }}
+    
 
+    <!----------------------- CSS ---------------------->
+
+{% stylesheets filter='?scssphp' 'bundles/core/css/header_footer.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
 
 
 

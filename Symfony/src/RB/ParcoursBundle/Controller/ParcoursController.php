@@ -22,6 +22,20 @@ class ParcoursController extends Controller
         ));
     }
 
+    public function menuPeriodeAction($limit)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $periodes = $em->getRepository('RBParcoursBundle:Periode')->findBy(
+      array(),                 // Pas de critère
+      array('id' => 'asc'), // On trie par date décroissante
+      $limit,                  // On sélectionne $limit annonces
+      0                        // À partir du premier
+      );
+
+    return $this->render('RBParcoursBundle:Parcours:menuPeriode.html.twig', 
+      array('periodes' => $periodes));
+    }
+
     public function vuePeriodeAction($id)
     {
        $em = $this->getDoctrine()->getManager();

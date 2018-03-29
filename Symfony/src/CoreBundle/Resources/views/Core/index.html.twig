@@ -17,7 +17,9 @@
 
     <!----------------------- CSS ---------------------->
 
-        {{ asset('css/accueil.css') }}
+{% stylesheets filter='cssrewrite, ?scssphp' 'bundles/core/css/accueil.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
 
     {% endblock %}
 
@@ -27,7 +29,7 @@
     <!----------------------- BLOC 1 : Image full size ---------------------->
 
     <div class="imgfullsize">
-        <img src="imgfullsize.jpg" alt="image_accueil"/>
+        <img src="{{ asset('bundles/rbparcours/images/periode1/4.jpg') }}" alt="image_accueil"/>
     </div>
 
 
