@@ -5,62 +5,44 @@
 
 <html>
 
-<head>
+  <head>
+        <title>{% block title %}Genevieve Cornu{% endblock %}</title>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+          {% include 'CoreBundle:Outils:header.html.twig' %}
 
-  <title>{% block title %}Genevieve Cornu{% endblock %}</title>
-
-
-  {% include 'CoreBundle:Outils:header.html.twig' %}
-
-
-  {% block stylesheets %}
+    {% block stylesheets %}
     
-    {# Inclure le css ici si il impacte l'ensemble du site #}
+  <!----------------------- CSS ---------------------->
 
-  {% endblock %}
-
-
-</head>
-
-    {# A retirer après le css #}
-</br>
-
-<body>
+    {% endblock %}
 
 
+  </head>
+
+
+  <body>
 
     {% block body %}
 
     {% endblock %}
 
 
+    {% block javascripts %}
 
+  <!----------------------- JAVASCRIPT ---------------------->
 
+    {% endblock %}
 
-{% block javascripts %}
+  </body>
 
-  {# Inclure le js ici si il impacte l'ensemble du site #}
-
-{% endblock %}
-
-
-
-</body>
-
-
-    {# A retirer après le css #}
-</br>
-
-<footer>
+  <footer>
 
   {% include 'CoreBundle:Outils:footer.html.twig' %}
 
 
-</footer>
-
+  </footer>
 
 </html>

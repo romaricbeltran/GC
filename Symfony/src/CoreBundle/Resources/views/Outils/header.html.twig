@@ -1,27 +1,69 @@
-{# header #}   
+{# head #}
+    <!----------------------- CSS ---------------------->
+                {{ asset('css/header_footer.css') }}
 
-<a href="{{path ('core_home')}}"><img src="{{ asset('images/Logo_GC.png') }}" alt="logo" height="50" /></a>
 
-Geneviève Cornu
 
-Citation
 
- <a href="{{path ('RB_biographie_home')}}" class="btn btn-default">
-    <i class="glyphicon glyphicon-chevron-right"></i>
-    Biographie
-</a>
+    <!----------------------- ADMINISTRATEUR ---------------------->
 
- <a href="{{path ('RB_parcours_home')}}" class="btn btn-default">
-    <i class="glyphicon glyphicon-chevron-right"></i>
-    Parcours Pictural
-</a>
+        <!-- apparait si connecté en tant qu'admin -->
+        <!-- <div class="administrateur"> -->
+            <!-- <p> Connecté en tant que Genevieve Cornu </p> -->
+    
+        <!-- href : pour le css redirige vers login directement -->
+     <!--        
+                <p> Se déconnecter </p>
+            </a>
+        </div> -->
 
- <a href="{{path ('RB_ecrit_home')}}" class="btn btn-default">
-    <i class="glyphicon glyphicon-chevron-right"></i>
-    Ecrits
-</a>
 
- <a href="{{path ('RB_contact_home')}}" class="btn btn-default">
-    <i class="glyphicon glyphicon-chevron-right"></i>
-    Contact
-</a>
+    <!----------------------- HEADER ---------------------->
+
+        <div class="header">
+            <nav>
+
+                <!-- Logo -->
+                <ul class="logo">
+                    <li>
+                        <a href="{{path ('core_home')}}">
+                            <img src="{{ asset('images/Logo_GC.png') }}" alt="Geneviève Cornu" height="40px"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{path ('core_home')}}">
+                            Geneviève Cornu </br>
+                            Artiste picturale et écrivaine
+                        </a>
+                    </li>    
+                </ul>
+
+                <!-- Menu -->
+                <ul class="menu">
+                    <li>
+                        <a href="{{path ('RB_biographie_home')}}">
+                            Biographie 
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{path ('RB_parcours_home')}}"> 
+                            Parcours pictural 
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{path ('RB_ecrit_home')}}"> 
+                            Ecrits 
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{path ('RB_contact_home')}}"> 
+                            Contact 
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>

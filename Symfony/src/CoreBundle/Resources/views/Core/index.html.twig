@@ -4,45 +4,86 @@
 {% extends "CoreBundle::layout.html.twig" %}
 
 
-    {# Exemple : on ouvre le block "titre", le titre pour cette  est "Accueil - Genevieve Cornu" #}
+{# Exemple : on ouvre le block "titre", le titre pour cette  est "Accueil - Genevieve Cornu" #}
 
 {% block title %}
-  Accueil - {{ parent() }}
+
+    {{ parent() }}
+
 {% endblock %}
+
+
+    {% block stylesheets %}
+
+    <!----------------------- CSS ---------------------->
+
+        {{ asset('css/accueil.css') }}
+
+    {% endblock %}
+
 
 {% block body %}
 
-{# Image d'accueil #}
-<img src="http://img.chefdentreprise.com/Img/FICHEPRATIQUE/2015/4/255263/travail-temporaire-necessite-intermediaire-agence-interim--F.jpg
-" alt="image_accueil" height="500" /></a>
+    <!----------------------- BLOC 1 : Image full size ---------------------->
+
+    <div class="imgfullsize">
+        <img src="imgfullsize.jpg" alt="image_accueil"/>
+    </div>
 
 
+    <!----------------------- BLOC 2 : Biographie ---------------------->
 
-{# Extrait Biographie #}
-<p>
-<a href="{{path ('core_home')}}"><img src="{{ asset('bundles/core/Images/genevieve_cornu.jpg') }}" alt="genevieve_cornu" height="300" /></a>
-    La biographie de Genevieve blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+    <div class="biographie">
 
-    <a href="{{path ('RB_biographie_home')}}"><button>Lire la suite</button>
-</p>
+        <div class="column1"> 
+            <img src="{{ asset('bundles/core/Images/genevieve_cornu.jpg') }}" alt="genevieve_cornu" height="200" />
+        </div>
 
-{# Lien Parcours Pictural #}
-<p>
-<a href="{{path ('RB_parcours_home')}}"><img src="https://static.fnac-static.com/multimedia/Images/FR/NR/1d/f3/51/5370653/1507-1/tsp20140808193152/Parcours-pictural.jpg" alt="parcours_accueil" height="500" /></a>
-
-</p>
-
-
-{# Liens Ecrits #}
-<p>
-<a href="{{path ('RB_ecrit_home')}}"><img src="http://christopheforgeot.fr/wp-content/uploads/2014/04/Po%C3%A8mes..png" alt="ecrit_poeme_accueil" height="50" /></a>
-
-<a href="{{path ('RB_ecrit_home')}}"><img src="http://www.romans.co.uk/images/Romans_Logo.jpg" alt="ecrit_romans_accueil" height="50" /></a>
-
-<a href="{{path ('RB_ecrit_home')}}"><img src="http://valcreuse.fr/wp-content/uploads/2017/09/panneau-theorie.jpg" alt="ecrit_theorique_accueil" height="100" /></a>
-</p>
+        <div class="column2">
+            <p> 
+                Je suis née en terre quercynoise. Mes poèmes et mes peintures s’en nourrissent, sites rupestres, eaux profondes, bêtes et gens, vision empreinte de tendresse. Je suis née de Paris, la ville qui m’a aidée à penser et à grandir : découvertes à travers les musées, une initiation qui m’a tenu lieu d’Ecole des Beaux Arts. Comme tout enrichissement culturel, les voyages ouvrent en moi des sensations et des émotions inattendues. </br>
+                La création m’a toujours intéressée. Institutrice, j’ai collecté des dessins d’enfants ; Universitaire, j’ai fondé ma recherche sur les questions liées à l’expression artistique. Mon autonomie matérielle assurait ma liberté pour mener cette aventure nécessaire, car je m’interrogeais souvent sur les raisons qui me guidaient selon les circonstances, de la peinture à la poésie.
+            </p>
+            <a href="{{path ('RB_biographie_home')}}" class="bouton">Lire la suite</a>
+        </div>
+    </div>
 
 
+    <!----------------------- BLOC 3 : Parcours pictural ---------------------->
 
+    <div class="parcourspictural">
+
+        <a href="{{path ('RB_parcours_home')}}">
+            <div>
+                <h2>Parcours pictural</h2>
+            </div>
+        </a>
+
+    </div>
+
+
+    <!----------------------- BLOC 4 : Ecrits ---------------------->
+
+    <div class="ecrits">
+
+        <a href="{{path ('RB_ecrit_home')}}">
+            <div>
+                <h2>Poèmes</h2>
+            </div>
+        </a>
+
+        <a href="{{path ('RB_ecrit_home')}}">
+            <div>
+                <h2>Romans & Nouvelles</h2>
+            </div>
+        </a>
+
+        <a href="{{path ('RB_ecrit_home')}}">
+            <div>
+                <h2>Ecrits théoriques</h2>
+            </div>
+        </a>
+
+    </div>
 
 {% endblock %}
