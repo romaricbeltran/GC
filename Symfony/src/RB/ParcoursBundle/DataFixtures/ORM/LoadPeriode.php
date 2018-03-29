@@ -5,9 +5,14 @@ namespace RB\ParcoursBundle\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\DataFixtures\ReferenceRepository;
 use RB\ParcoursBundle\Entity\Periode;
 
-class LoadPeriode implements FixtureInterface
+class LoadPeriode        
+       extends AbstractFixture 
+       implements OrderedFixtureInterface
 {
     //Dans l'argument de la méthode load, l'objet $manager est l'EntityManager
     public function load(ObjectManager $manager)
@@ -23,19 +28,34 @@ class LoadPeriode implements FixtureInterface
             'Narration fantastique' => null,
         );
 
+        $i=1;
 
         foreach($periodes as $cle1 => $valeur1)
         {
-            $periode1 = new Periode();
-            $periode1->setTitre($cle1);
-            $periode1->setDate($valeur1);
+            $periode = new Periode();
+            $periode->setTitre($cle1);
+            $periode->setDate($valeur1);
 
-            $manager->persist($periode1);
+
+            $this->addReference('periode'.$i.'' , $periode);
+
+            $manager->persist($periode);
+
+            $i++;
         }
 
         //on enregistre tout
         $manager->flush();
     }
+  /**
+  * Get the order of this fixture
+  * @return integer
+  */
+  public function getOrder()
+  {
+    return 1;
+  }
 }
+
 
 ?>
