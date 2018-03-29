@@ -3,5 +3,7 @@ RB_parcours_home:
     defaults: { _controller: RBParcoursBundle:Parcours:index }
 
 RB_parcours_vue_periode:
-    path:     /vue_periode
+    path:     /periode/{id}
     defaults: { _controller: RBParcoursBundle:Parcours:vuePeriode }
+    requirements:
+        id: \d+

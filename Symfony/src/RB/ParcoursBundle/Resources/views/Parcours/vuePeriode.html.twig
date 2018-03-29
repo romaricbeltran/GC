@@ -4,13 +4,19 @@
 
 {% block body %}
 
+<p>Parcours Pictural...</p>
+
+
+<p>{{periode.titre}} {{periode.date}}</p>
+
 
     <div>
-      <ul>
-        {% for periode in periodes %}
-            <li><a href="{{ path('RB_parcours_vue_periode', {'id': periode.id}) }}">{{ periode.titre }}{% if periode.date is not null %}, {{ periode.date }}{% endif %}</a></li>
+        {% for sousPartie in sousParties %}
+            {{ sousPartie.titre }} {{sousPartie.description }} 
+        </br>
+        </br>
+        </br>
         {% endfor %}
-      </ul>
     </div>
 
 {% endblock %}
