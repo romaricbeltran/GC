@@ -47,13 +47,15 @@ class LoadPeriode
         //on enregistre tout
         $manager->flush();
     }
+
   /**
   * Get the order of this fixture
+  * 
   * @return integer
   */
   public function getOrder()
   {
-    return 1;
+    return 2;
   }
 }
 
