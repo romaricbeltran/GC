@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Genevieve Cornu</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!----------------------- CSS ---------------------->
+        <link rel="stylesheet" type="text/css" href="header_footer.css">
+
+
+    <!----------------------- ADMINISTRATEUR ---------------------->
+
+        <!-- apparait si connecté en tant qu'admin -->
+        <div class="administrateur">
+            <p> Connecté en tant que Genevieve Cornu </p>
+    
+        <!-- href : pour le css redirige vers login directement -->
+            <a href="{{path ('logout')}}">
+                <p> Se déconnecter </p>
+            </a>
+        </div>
+
+
+	<!----------------------- HEADER ---------------------->
+
+        <div class="header">
+            <nav>
+
+                <!-- Logo -->
+                <ul class="logo">
+                    <li>
+                        <a href="www.genevievecornu.fr">
+                            <img src="logo.png" alt="Geneviève Cornu" height="40px"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.genevievecornu.fr">
+                            Geneviève Cornu </br>
+                            Artiste picturale et écrivaine
+                        </a>
+                    </li>    
+                </ul>
+
+                <!-- Menu -->
+                <ul class="menu">
+                    <li>
+                        <a href="{{path ('RB_biographie_home')}}">
+                            Biographie 
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{path ('RB_parcours_home')}}"> 
+                            Parcours pictural 
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{path ('RB_ecrit_home')}}"> 
+                            Ecrits 
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{path ('RB_contact_home')}}"> 
+                            Contact 
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+    </head>
+
+
+	<!----------------------- FOOTER ---------------------->
+
+    <footer>
+
+        <!-- 3 colonnes -->
+        <div class="column">
+            <h3> Biographie </h3> </br>
+                <img src="GC.jpg" alt="Geneviève Cornu" height="60px"/>
+                <p> Je suis née en terre quercynoise. Mes poèmes et mes peintures s’en nourrissent, sites rupestres, eaux profondes, bêtes et gens, vision empreinte de tendresse. Je suis née de Paris, la ville qui m’a aidée à penser et à grandir. </p>
+                <a href=""> Lire la suite ... </a> </br>
+        </div>
+
+        <div class="column">
+            <h3> Parcours pictural </h3> </br>
+                <a href=""> Objets et surfaces </a> </br>
+                <a href=""> Recherche et structures </a> </br>
+                <a href=""> Ecritures - Signes </a> </br>
+                <a href=""> Dialogue de la Peinture et de la Poésie </a> </br>
+                <a href=""> Formes intuitives </a> </br>
+                <a href=""> Construction des objets mentaux </a> </br>
+                <a href=""> Narration fantastique </a> </br>
+        </div>
+
+        <div class="column">
+            <h3> Ecrits </h3> </br>
+                <a href=""> Poèmes </a> </br>
+                <a href=""> Romans & Nouvelles </a> </br>
+                <a href=""> Ecrits théoriques </a> </br>
+        </div>
+
+
+        <!-- Mentions légales / Plan du site / Site réalisé par ... -->
+        <div> </br></br>
+            <a href=""> Mentions légales </a>
+        </div>
+
+        <div> </br></br>
+            <a href=""> Plan du site </a>
+        </div>
+
+
+        </br>
+        <div>
+            <p> 
+                Site réalisé par <a href=""> Romaric BELTRAN</a> & <a href=""> Diana PORTELA</a>
+            </p>
+        </div>
+
+    </footer>
+
+
+</html>
