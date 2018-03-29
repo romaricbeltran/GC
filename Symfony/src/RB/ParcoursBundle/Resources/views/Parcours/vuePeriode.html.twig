@@ -11,11 +11,30 @@
 
 
     <div>
+</br>
+
+{# {% for oeuvre in oeuvres %}
+{{ dump(oeuvre) }}
+{% endfor %} #}
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
         {% for sousPartie in sousParties %}
             {{ sousPartie.titre }} {{sousPartie.description }} 
-        </br>
-        </br>
-        </br>
+</br>
+</br>
+            {% for oeuvre in oeuvres %}
+        {{ oeuvre.image.chemin }}
+                    {{ oeuvre.titre }} <img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}" width="60">
+    
+</br>
+            {% endfor %}
         {% endfor %}
     </div>
 

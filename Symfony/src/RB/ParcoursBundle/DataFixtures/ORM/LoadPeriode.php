@@ -37,7 +37,7 @@ class LoadPeriode
             $periode->setDate($valeur1);
 
 
-            $this->addReference('periode'.$i.'' , $periode);
+            $this->addReference('periode'.$i.'', $periode);
 
             $manager->persist($periode);
 
@@ -55,7 +55,7 @@ class LoadPeriode
   */
   public function getOrder()
   {
-    return 2;
+    return 1;
   }
 }
 

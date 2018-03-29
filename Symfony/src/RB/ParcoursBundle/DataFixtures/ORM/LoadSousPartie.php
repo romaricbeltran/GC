@@ -35,6 +35,7 @@ implements OrderedFixtureInterface
 );
     $sousPartie1->setPeriode($periode1);
     $sousPartie1->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie1' , $sousPartie1);
     $manager->persist($sousPartie1);
 
 
@@ -44,6 +45,7 @@ implements OrderedFixtureInterface
 );
     $sousPartie2->setPeriode($periode2);
     $sousPartie2->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie2' , $sousPartie2);
     $manager->persist($sousPartie2);
 
 
@@ -57,6 +59,7 @@ implements OrderedFixtureInterface
 );
     $sousPartie3->setPeriode($periode3);
     $sousPartie3->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie3' , $sousPartie3);
     $manager->persist($sousPartie3);    
 
 
@@ -67,6 +70,7 @@ implements OrderedFixtureInterface
 );
     $sousPartie4->setPeriode($periode3);
     $sousPartie4->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie4' , $sousPartie4);
     $manager->persist($sousPartie4);
 
 
@@ -77,6 +81,7 @@ implements OrderedFixtureInterface
 );
     $sousPartie5->setPeriode($periode3);
     $sousPartie5->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie5' , $sousPartie5);
     $manager->persist($sousPartie5);
 
 
@@ -87,6 +92,7 @@ implements OrderedFixtureInterface
 );
     $sousPartie6->setPeriode($periode4);
     $sousPartie6->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie6' , $sousPartie6);
     $manager->persist($sousPartie6);
 
  
@@ -99,71 +105,105 @@ implements OrderedFixtureInterface
 );
     $sousPartie7->setPeriode($periode4);
     $sousPartie7->getPeriode()->increaseSousPartie();
-    $manager->persist($sousPartie7);    
+    $this->addReference('sous_partie7' , $sousPartie7);
+    $manager->persist($sousPartie7);
+
 
 
     $sousPartie8 = new SousPartie();
-    $sousPartie8->setTitre('1- Les plans détournés');
-    $sousPartie8->setDescription('Ma fascination pour le schématisme vient-elle d’une vocation rentrée d’architecte ou d’urbaniste ? Sans doute la création est-elle soutenue par un terreau de nostalgies. Dès les années 75 certains tableaux présentaient des formes emboîtées, des plans, des jeux de construction (marinas, villes fabuleuses..) dont l’aspect formel et figé m’avait conduite à une impasse. Plus tard, je me suis amusée à détourner de leur fonction des plans d’ingénieur, un support fragile dont on remarque les pliures, les légendes et les cotes : cette démarche remplaçait par la fantaisie et les discours drolatiques, les traductions codées des schémas scientifiques. Supports d’un message rigoureux réduit à la maigreur de l’énoncé, je leur substitue des formes intuitives, monstres ou poupées désarticulées. Les formes scientifiques sont vouées à un codage et donc à une transcription verbale précise visant à l’information et à la communication efficace. Dans ces squelettes, la main pensante projette des traces où l’on détecte des fantasmes robotiques ayant des connivences avec la chair, nerfs et muscles. Superposition de la technique, des sciences naturelles et des images de l’archéologie. Robots ? Usines biologiques ? Masques d’insectes ? Totems primitifs ? Le travail sur le dialogue entre la peinture et la poésie (voir chapitre précédent) nous affranchit d’un support préétabli et même des titres, des interprétations données. Je dessine et peins sans avoir de projet énonçable. La main pensante se fait plus intuitive, les formes sont l’expression de cette libération par rapport au langage. Les formes deviennent en elles-mêmes poétiques, se prêtant à l’ultime émergence de métaphores dans lesquelles la matière et en particulier le support vont jouer un rôle expressif.'
+    $sousPartie8->setTitre('3- Livre d’artiste');
+    $sousPartie8->setDescription('Illustrations de citations sélectionnées de mes écrits, poésie ou prose poétique'
 );
-    $sousPartie8->setPeriode($periode5);
+    $sousPartie8->setPeriode($periode4);
     $sousPartie8->getPeriode()->increaseSousPartie();
-    $manager->persist($sousPartie8);    
+    $this->addReference('sous_partie8' , $sousPartie8);
+    $manager->persist($sousPartie8);
+
 
 
     $sousPartie9 = new SousPartie();
-    $sousPartie9->setTitre('2- Les Kakémonos');
-    $sousPartie9->setDescription('Encore le hasard inspiré ! Un morceau de papier blanc « à peindre » légèrement gaufré traîne dans mon carton à dessins : cela doit faire trois ans que j’y ai gribouillé une sorte de profil félin c’est tout du moins ce que je vois « après » l’avoir dessiné. Donc je retrouve ce morceau de quelque chose, et je découvre les effets du grain que je n’avais pas remarqué, ainsi le moment est venu d’une certaine maturité, je suis « à point » pour entreprendre. Le format se révèle plein de questionnements : où faudra-t-il couper le rouleau ? Quelle doit être l’importance des motifs ? Tout cela est en fait guidé par les contraintes matérielles : la largeur de la table à dessin par exemple, la hauteur sous plafond de la galerie…etc Un motif apparaît, auquel je n’avais pas pensé : racontent-ils des histoires ? Ont-ils un lien entre eux ? Le fond doit être retravaillé en général, peut-être pour éviter un rappel de papier peint mural. Les œuvres sont fragiles, périssables. Au moment où les artistes des galeries donnent dans le monumental, dans les technologies ruineuses, je ne sais comment me situer : c’est un art pauvre et périssable, qui ne vaut que par le plaisir ludique de son exécution, et par les images « de synthèse » qui me viennent de toutes les images et toutes sortes de sensations imprécises et de tout un savoir, mon stock personnel qui vient à la surface, une sorte de mémoire intuitive et sensorielle.'
+    $sousPartie9->setTitre('4- Pastels-haïkus');
+    $sousPartie9->setDescription('Dans le siècle des écritures virtuelles, j’ai aimé travailler avec des poudres de roches. Ensuite, les pastels ont permis ce contact direct.'
 );
-    $sousPartie9->setPeriode($periode5);
+    $sousPartie9->setPeriode($periode4);
     $sousPartie9->getPeriode()->increaseSousPartie();
-    $manager->persist($sousPartie9);
+    $this->addReference('sous_partie9' , $sousPartie9);
+    $manager->persist($sousPartie9);    
+
 
 
 
     $sousPartie10 = new SousPartie();
-    $sousPartie10->setTitre('3- Collages');
-    $sousPartie10->setDescription('Dans la suite des dialogues peinture-poésie, les formes acquièrent en elles-mêmes une suggestivité poétique. Le travail sur les formes, sans contenu préalablement donné, vient appuyer cet objectif, en particulier les découpages, collages.'
+    $sousPartie10->setTitre('1- Les plans détournés');
+    $sousPartie10->setDescription('Ma fascination pour le schématisme vient-elle d’une vocation rentrée d’architecte ou d’urbaniste ? Sans doute la création est-elle soutenue par un terreau de nostalgies. Dès les années 75 certains tableaux présentaient des formes emboîtées, des plans, des jeux de construction (marinas, villes fabuleuses..) dont l’aspect formel et figé m’avait conduite à une impasse. Plus tard, je me suis amusée à détourner de leur fonction des plans d’ingénieur, un support fragile dont on remarque les pliures, les légendes et les cotes : cette démarche remplaçait par la fantaisie et les discours drolatiques, les traductions codées des schémas scientifiques. Supports d’un message rigoureux réduit à la maigreur de l’énoncé, je leur substitue des formes intuitives, monstres ou poupées désarticulées. Les formes scientifiques sont vouées à un codage et donc à une transcription verbale précise visant à l’information et à la communication efficace. Dans ces squelettes, la main pensante projette des traces où l’on détecte des fantasmes robotiques ayant des connivences avec la chair, nerfs et muscles. Superposition de la technique, des sciences naturelles et des images de l’archéologie. Robots ? Usines biologiques ? Masques d’insectes ? Totems primitifs ? Le travail sur le dialogue entre la peinture et la poésie (voir chapitre précédent) nous affranchit d’un support préétabli et même des titres, des interprétations données. Je dessine et peins sans avoir de projet énonçable. La main pensante se fait plus intuitive, les formes sont l’expression de cette libération par rapport au langage. Les formes deviennent en elles-mêmes poétiques, se prêtant à l’ultime émergence de métaphores dans lesquelles la matière et en particulier le support vont jouer un rôle expressif.'
 );
     $sousPartie10->setPeriode($periode5);
     $sousPartie10->getPeriode()->increaseSousPartie();
-    $manager->persist($sousPartie10);
-
+    $this->addReference('sous_partie10' , $sousPartie10);
+    $manager->persist($sousPartie10);    
 
 
     $sousPartie11 = new SousPartie();
-    $sousPartie11->setTitre('1- Ossature des objets, des décors');
-    $sousPartie11->setDescription('Parfois, l’imaginaire conserve des traces d’une rencontre avec la réalité dont nous recherchons l’ossature, la structure interne : un objet, un paysage urbain (Usines dans le matin), un événement (Les Pink Floyd, Le Football). L’ossature n’est pas un schéma,elle n’a rien de mesuré : c’est la sensation de l’essentiel non visible, un peu comme le support en fils de fer qui porte la chair de la sculpture. Cette période de création a certainement été inconsciemment influencée par une interrogation sur les écritures non-verbales ; traçages, projection des formes mouvantes qui peuplent l’imagination, comme un coup de sonde aléatoire dans l’inconnu de la pensée visuelle: une pensée sans langage! Ainsi se confirme ce que j’ai pressenti et ensuite essayé de démontrer : “ l’art n’est pas un langage ”, puisque sa particularité est d’échapper aux codes, aux modes de production. Point de vue se démarquant de la domination linguistique. Quelques oeuvres sont prémonitoires :La Meule, ou Bois flottants travaillent les pastels dans le même esprit. L’élan est donné en 1996 où le mélange des pastels avec l’essence permet de modeler des traits stables et des formes fluides répondant à la mobilité de la vie de l’imaginaire. A l’aide de pinceaux de différentes duretés et épaisseurs cette technique rend le pastel fluide : il s’établit une harmonie de réponses entre les mouvances de la pensée non-verbale et la malléabilité des pastels ainsi dilués comme dans Paysage au pin. Paysage au pin conserve des signes iconiques identifiables. Ce n’est pas encore tout à fait un paysage intérieur.'
+    $sousPartie11->setTitre('2- Les Kakémonos');
+    $sousPartie11->setDescription('Encore le hasard inspiré ! Un morceau de papier blanc « à peindre » légèrement gaufré traîne dans mon carton à dessins : cela doit faire trois ans que j’y ai gribouillé une sorte de profil félin c’est tout du moins ce que je vois « après » l’avoir dessiné. Donc je retrouve ce morceau de quelque chose, et je découvre les effets du grain que je n’avais pas remarqué, ainsi le moment est venu d’une certaine maturité, je suis « à point » pour entreprendre. Le format se révèle plein de questionnements : où faudra-t-il couper le rouleau ? Quelle doit être l’importance des motifs ? Tout cela est en fait guidé par les contraintes matérielles : la largeur de la table à dessin par exemple, la hauteur sous plafond de la galerie…etc Un motif apparaît, auquel je n’avais pas pensé : racontent-ils des histoires ? Ont-ils un lien entre eux ? Le fond doit être retravaillé en général, peut-être pour éviter un rappel de papier peint mural. Les œuvres sont fragiles, périssables. Au moment où les artistes des galeries donnent dans le monumental, dans les technologies ruineuses, je ne sais comment me situer : c’est un art pauvre et périssable, qui ne vaut que par le plaisir ludique de son exécution, et par les images « de synthèse » qui me viennent de toutes les images et toutes sortes de sensations imprécises et de tout un savoir, mon stock personnel qui vient à la surface, une sorte de mémoire intuitive et sensorielle.'
 );
-    $sousPartie11->setPeriode($periode6);
+    $sousPartie11->setPeriode($periode5);
     $sousPartie11->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie11' , $sousPartie11);
     $manager->persist($sousPartie11);
 
+
+
     $sousPartie12 = new SousPartie();
-    $sousPartie12->setTitre('2- Paysages intérieurs');
-    $sousPartie12->setDescription('Viennent avec plus d’assurance les tableaux d’acrylique sur toile dans lesquels s’affirment les paysages intérieurs avec des formes suggestives d’étranges pays. Ce qui conforte l’idée de la nécessité d’une richesse du musée imaginaire, ce qui distingue l’œuvre de culture de l’art naïf ou de l’art des fous. Ma remarque n’est pas d’exclusion : elle affirme une évidence, que nous sommes dans des univers différents. Le jeu devient de plus en plus libre, les formes surgies du terreau culturel sont de plus en plus plurielles : Masques, totems, voyages d’Orient, romanesque… métaphoriques, offertes à des sensibilités paysages et êtres mêlés à la création. Et voilà qu’au détour de l’imaginaire surgit le masque ou la silhouette, narrateur ou chamane, certainement pas un simple découpage collé dans un décor. La figure qui surgit sans prévenir témoigne de son existence à l’égal des autres choses et des êtres sans âge, sans dimension aucune, dans un univers sans repères, sans mesure, mais non pas démesuré. Il participe à toute vie, avec la terre, l’eau, le soleil. Avant l’homo sapiens peut-être. Avant la parole. Et pourtant nourri d’interférences culturelles. Mon œuvre ne serait pas telle sans mes lectures, sans mes voyages, sans la réflexion sans cesse menée sur la création artistique, et sur la confrontation de la peinture avec la poésie. Avec la conviction que la rhétorique classique, comme la linguistique, sont des sciences du langage, mais qu’elles ne peuvent pas expliquer le miracle de la création et son pouvoir libérateur. Le travail sur le dialogue entre la peinture et la poésie nous affranchit d’un support préétabli et même des titres, des interprétations données. Je dessine et peins sans avoir de projet énonçable. La main pensante se fait plus intuitive, les formes sont l’expression de cette libération par rapport au langage. Les formes deviennent en elles-mêmes poétiques, se prêtant l’ultime émergence de métaphores dans lesquelles la matière et en particulier le support vont jouer un rôle expressif. Cette période de création a certainement été inconsciemment influencée par une interrogation sur les écritures non-verbales ; traçages, projection des formes mouvantes qui peuplent l’imagination, comme un coup de sonde aléatoire dans l’inconnu de la pensée visuelle: une pensée sans langage! Ainsi se confirme ce que j’ai pressenti et ensuite essayé de démontrer : “ l’art n’est pas un langage ”, puisque sa particularité est d’échapper aux codes, aux modes de production. Point de vue se démarquant de la domination linguistique. Dans l’espace cérébral, règnent les “ correspondances ” quand l’ordre du langage ne divise pas nos sensations, retour au monde d’avant la séparation et pourtant riche de connaissances. Les oeuvres inventent des “ signes-vifs ” qui ne sont pas identifiables ou dont la reconnaissance est secondaire. Ces signes non-verbaux incitent au jeu des correspondances, qu’elles soient dans le domaine des sensations ou de la culture : nous ne devons pas séparer ces domaines qui apportent des possibilités de jouissance, d’émotion, distinguant l’homme des machines. N’est-ce pas, avec ce grand problème de la modernité, le rôle éminemment social, philosophique et humaniste de l’art ? Les titres ne jouent plus qu’un rôle mnémonique, utiles pour un répertoire des œuvres. On va les appeler « astres, fantômes, cascade…. » en espérant que le titre ne restreindra pas l’osmose avec l’œuvre qui doit ouvrir le jeu de l’imagination sensible, et même sensorielle, comme les notes d’une partition suscitent des sensations personnelles lièés à notre propre existence comme à l’inconscient collectif. Le « lecteur » devient créateur, l’oeuvre aura de multiples vies qui n’appartiennent plus au peintre. J’ai moi-même éprouvé cette labilité en découvrant d’une année sur l’autre, des sensations et des émotions nouvelles à propos d’un même tableau. Le titre doit être écarté de la lecture contemplative. En fait, l’interprétation revient au spectateur. Pour l’artiste, la voie est ouverte pour la recherche de formes intuitives.
-'
+    $sousPartie12->setTitre('3- Collages');
+    $sousPartie12->setDescription('Dans la suite des dialogues peinture-poésie, les formes acquièrent en elles-mêmes une suggestivité poétique. Le travail sur les formes, sans contenu préalablement donné, vient appuyer cet objectif, en particulier les découpages, collages.'
 );
-    $sousPartie12->setPeriode($periode6);
+    $sousPartie12->setPeriode($periode5);
     $sousPartie12->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie12' , $sousPartie12);
     $manager->persist($sousPartie12);
 
 
+
+
+
     $sousPartie13 = new SousPartie();
-    $sousPartie13->setTitre('1- La narration fantastique');
-    $sousPartie13->setDescription('Les formes naissent d’un geste ample sur la toile, puis elles sont peintes et sculptées, brodées, venues de la terre ou de l’eau, du feu, de l’air, des végétaux, des minéraux, d’êtres de chair et de nerfs, de nervures, de fluides… de la danse des corps de toutes sortes confondus, enlacés ; de la confusion des espèces et des mondes. Et d’une toile à l’autre se poursuit le déroulement, la prolongation du geste et de la couleur, la précédente engendre la suivante et ainsi de suite, dans une cohérence de la représentation, dans le chaos, le surgissement des objets sans nom, objets mentaux nés de l’inconscient chargé de mémoire sensible. Apparaissent des acteurs : des bribes de récits se bousculent, des mythes incohérents, des figures drôlatiques. Suite de 15 acryliques sur toiles dont les mouvements s’enchainent formant une frise, mais dont chaque panneau peut vivre isolément. Il n’empêche que s’exprime de cette façon de faire comme l’écoulement d’un fleuve, donc l’intrusion du temps, donc une succession narrative comme les chapitres d’un livre. Libre à chacun de se raconter des histoires pourvu qu’elles ne soient pas figées dans un texte, dans un récit. Les œuvres ne sont pas des illustrations, elles prouvent au contraire la mise à distance du verbal et du pictural. Les formes d’ailleurs parfois s’enchevêtrent et jouent d’ambiguïtés, de leurs métamorphoses, elles nous échappent, elles sont mouvantes, insaisissables, indéfinissables.'
+    $sousPartie13->setTitre('1- Ossature des objets, des décors');
+    $sousPartie13->setDescription('Parfois, l’imaginaire conserve des traces d’une rencontre avec la réalité dont nous recherchons l’ossature, la structure interne : un objet, un paysage urbain (Usines dans le matin), un événement (Les Pink Floyd, Le Football). L’ossature n’est pas un schéma,elle n’a rien de mesuré : c’est la sensation de l’essentiel non visible, un peu comme le support en fils de fer qui porte la chair de la sculpture. Cette période de création a certainement été inconsciemment influencée par une interrogation sur les écritures non-verbales ; traçages, projection des formes mouvantes qui peuplent l’imagination, comme un coup de sonde aléatoire dans l’inconnu de la pensée visuelle: une pensée sans langage! Ainsi se confirme ce que j’ai pressenti et ensuite essayé de démontrer : “ l’art n’est pas un langage ”, puisque sa particularité est d’échapper aux codes, aux modes de production. Point de vue se démarquant de la domination linguistique. Quelques oeuvres sont prémonitoires :La Meule, ou Bois flottants travaillent les pastels dans le même esprit. L’élan est donné en 1996 où le mélange des pastels avec l’essence permet de modeler des traits stables et des formes fluides répondant à la mobilité de la vie de l’imaginaire. A l’aide de pinceaux de différentes duretés et épaisseurs cette technique rend le pastel fluide : il s’établit une harmonie de réponses entre les mouvances de la pensée non-verbale et la malléabilité des pastels ainsi dilués comme dans Paysage au pin. Paysage au pin conserve des signes iconiques identifiables. Ce n’est pas encore tout à fait un paysage intérieur.'
 );
-    $sousPartie13->setPeriode($periode7);
+    $sousPartie13->setPeriode($periode6);
     $sousPartie13->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie13' , $sousPartie13);
     $manager->persist($sousPartie13);
 
     $sousPartie14 = new SousPartie();
-    $sousPartie14->setTitre('2- ?');
-    $sousPartie14->setDescription('Nées d’un mouvement involontaire, dictées par quels processus ? Ces formes, je les appelle des objets mentaux. Ne me rappellent-elles pas ces ossatures d’objets réels que je dessinais en regardant le soc d’une charrue ?Le soc devient une aile, un insecte. Je retrouve aussi quelque chose de Wilfredo Lam, la force des formes dépouillées et cependant vibrantes. De terre et de métal. Ou bien les silhouettes dans quelque désert, mais quel désert étrange d’où s’envolent des germes, des insectes, des larves. Ou bien des corps côté ombre et côté lumière, nus ou tatoués ou vêtus d’étoffes peintes. Ambiguïtés, métamorphoses, jeux de la mémoire, de l’imagination, de la sensibilité, de l’émotion.'
+    $sousPartie14->setTitre('2- Paysages intérieurs');
+    $sousPartie14->setDescription('Viennent avec plus d’assurance les tableaux d’acrylique sur toile dans lesquels s’affirment les paysages intérieurs avec des formes suggestives d’étranges pays. Ce qui conforte l’idée de la nécessité d’une richesse du musée imaginaire, ce qui distingue l’œuvre de culture de l’art naïf ou de l’art des fous. Ma remarque n’est pas d’exclusion : elle affirme une évidence, que nous sommes dans des univers différents. Le jeu devient de plus en plus libre, les formes surgies du terreau culturel sont de plus en plus plurielles : Masques, totems, voyages d’Orient, romanesque… métaphoriques, offertes à des sensibilités paysages et êtres mêlés à la création. Et voilà qu’au détour de l’imaginaire surgit le masque ou la silhouette, narrateur ou chamane, certainement pas un simple découpage collé dans un décor. La figure qui surgit sans prévenir témoigne de son existence à l’égal des autres choses et des êtres sans âge, sans dimension aucune, dans un univers sans repères, sans mesure, mais non pas démesuré. Il participe à toute vie, avec la terre, l’eau, le soleil. Avant l’homo sapiens peut-être. Avant la parole. Et pourtant nourri d’interférences culturelles. Mon œuvre ne serait pas telle sans mes lectures, sans mes voyages, sans la réflexion sans cesse menée sur la création artistique, et sur la confrontation de la peinture avec la poésie. Avec la conviction que la rhétorique classique, comme la linguistique, sont des sciences du langage, mais qu’elles ne peuvent pas expliquer le miracle de la création et son pouvoir libérateur. Le travail sur le dialogue entre la peinture et la poésie nous affranchit d’un support préétabli et même des titres, des interprétations données. Je dessine et peins sans avoir de projet énonçable. La main pensante se fait plus intuitive, les formes sont l’expression de cette libération par rapport au langage. Les formes deviennent en elles-mêmes poétiques, se prêtant l’ultime émergence de métaphores dans lesquelles la matière et en particulier le support vont jouer un rôle expressif. Cette période de création a certainement été inconsciemment influencée par une interrogation sur les écritures non-verbales ; traçages, projection des formes mouvantes qui peuplent l’imagination, comme un coup de sonde aléatoire dans l’inconnu de la pensée visuelle: une pensée sans langage! Ainsi se confirme ce que j’ai pressenti et ensuite essayé de démontrer : “ l’art n’est pas un langage ”, puisque sa particularité est d’échapper aux codes, aux modes de production. Point de vue se démarquant de la domination linguistique. Dans l’espace cérébral, règnent les “ correspondances ” quand l’ordre du langage ne divise pas nos sensations, retour au monde d’avant la séparation et pourtant riche de connaissances. Les oeuvres inventent des “ signes-vifs ” qui ne sont pas identifiables ou dont la reconnaissance est secondaire. Ces signes non-verbaux incitent au jeu des correspondances, qu’elles soient dans le domaine des sensations ou de la culture : nous ne devons pas séparer ces domaines qui apportent des possibilités de jouissance, d’émotion, distinguant l’homme des machines. N’est-ce pas, avec ce grand problème de la modernité, le rôle éminemment social, philosophique et humaniste de l’art ? Les titres ne jouent plus qu’un rôle mnémonique, utiles pour un répertoire des œuvres. On va les appeler « astres, fantômes, cascade…. » en espérant que le titre ne restreindra pas l’osmose avec l’œuvre qui doit ouvrir le jeu de l’imagination sensible, et même sensorielle, comme les notes d’une partition suscitent des sensations personnelles lièés à notre propre existence comme à l’inconscient collectif. Le « lecteur » devient créateur, l’oeuvre aura de multiples vies qui n’appartiennent plus au peintre. J’ai moi-même éprouvé cette labilité en découvrant d’une année sur l’autre, des sensations et des émotions nouvelles à propos d’un même tableau. Le titre doit être écarté de la lecture contemplative. En fait, l’interprétation revient au spectateur. Pour l’artiste, la voie est ouverte pour la recherche de formes intuitives.
+'
 );
-    $sousPartie14->setPeriode($periode7);
+    $sousPartie14->setPeriode($periode6);
     $sousPartie14->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie14' , $sousPartie14);
     $manager->persist($sousPartie14);
+
+
+    $sousPartie15 = new SousPartie();
+    $sousPartie15->setTitre('1- La narration fantastique');
+    $sousPartie15->setDescription('Les formes naissent d’un geste ample sur la toile, puis elles sont peintes et sculptées, brodées, venues de la terre ou de l’eau, du feu, de l’air, des végétaux, des minéraux, d’êtres de chair et de nerfs, de nervures, de fluides… de la danse des corps de toutes sortes confondus, enlacés ; de la confusion des espèces et des mondes. Et d’une toile à l’autre se poursuit le déroulement, la prolongation du geste et de la couleur, la précédente engendre la suivante et ainsi de suite, dans une cohérence de la représentation, dans le chaos, le surgissement des objets sans nom, objets mentaux nés de l’inconscient chargé de mémoire sensible. Apparaissent des acteurs : des bribes de récits se bousculent, des mythes incohérents, des figures drôlatiques. Suite de 15 acryliques sur toiles dont les mouvements s’enchainent formant une frise, mais dont chaque panneau peut vivre isolément. Il n’empêche que s’exprime de cette façon de faire comme l’écoulement d’un fleuve, donc l’intrusion du temps, donc une succession narrative comme les chapitres d’un livre. Libre à chacun de se raconter des histoires pourvu qu’elles ne soient pas figées dans un texte, dans un récit. Les œuvres ne sont pas des illustrations, elles prouvent au contraire la mise à distance du verbal et du pictural. Les formes d’ailleurs parfois s’enchevêtrent et jouent d’ambiguïtés, de leurs métamorphoses, elles nous échappent, elles sont mouvantes, insaisissables, indéfinissables.'
+);
+    $sousPartie15->setPeriode($periode7);
+    $sousPartie15->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie15' , $sousPartie15);
+    $manager->persist($sousPartie15);
+
+    $sousPartie16 = new SousPartie();
+    $sousPartie16->setTitre('2- ?');
+    $sousPartie16->setDescription('Nées d’un mouvement involontaire, dictées par quels processus ? Ces formes, je les appelle des objets mentaux. Ne me rappellent-elles pas ces ossatures d’objets réels que je dessinais en regardant le soc d’une charrue ?Le soc devient une aile, un insecte. Je retrouve aussi quelque chose de Wilfredo Lam, la force des formes dépouillées et cependant vibrantes. De terre et de métal. Ou bien les silhouettes dans quelque désert, mais quel désert étrange d’où s’envolent des germes, des insectes, des larves. Ou bien des corps côté ombre et côté lumière, nus ou tatoués ou vêtus d’étoffes peintes. Ambiguïtés, métamorphoses, jeux de la mémoire, de l’imagination, de la sensibilité, de l’émotion.'
+);
+    $sousPartie16->setPeriode($periode7);
+    $sousPartie16->getPeriode()->increaseSousPartie();
+    $this->addReference('sous_partie16' , $sousPartie16);
+    $manager->persist($sousPartie16);
 
         //on enregistre tout
     $manager->flush();
@@ -176,7 +216,7 @@ implements OrderedFixtureInterface
   */
   public function getOrder()
   {
-    return 3;
+    return 2;
   }
 }
 

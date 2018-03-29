@@ -236,28 +236,4 @@ class Oeuvre
     {
         return $this->image;
     }
-
-    /**
-     * Set sousPartie.
-     *
-     * @param \RB\ParcoursBundle\Entity\SousPartie|null $sousPartie
-     *
-     * @return Oeuvre
-     */
-    public function setSousPartie(\RB\ParcoursBundle\Entity\SousPartie $sousPartie = null)
-    {
-        $this->sousPartie = $sousPartie;
-
-        return $this;
-    }
-
-    /**
-     * Get sousPartie.
-     *
-     * @return \RB\ParcoursBundle\Entity\SousPartie|null
-     */
-    public function getSousPartie()
-    {
-        return $this->sousPartie;
-    }
 }

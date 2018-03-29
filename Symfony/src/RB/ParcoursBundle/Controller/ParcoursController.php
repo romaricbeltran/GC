@@ -32,23 +32,15 @@ class ParcoursController extends Controller
             throw new NotFoundHttpException("La periode d'id ".$id." n'existe pas.");
         }
 
-       $sousParties=$em->getRepository('RBParcoursBundle:SousPartie')->findByPeriode($id);
+       $sousParties=$em->getRepository('RBParcoursBundle:SousPartie')->findBy(array('periode' => $periode));
+
+       $oeuvres=$em->getRepository('RBParcoursBundle:Oeuvre')->findBy(array('sousPartie' => $sousParties));  // ne retourne qu'un tableau d'oeuvres alors qu'il doit retourner un tableau par sousParties
 
 
         return $this->render('RBParcoursBundle:Parcours:vuePeriode.html.twig', array(
           'periode' => $periode,
           'sousParties' => $sousParties,
+          'oeuvres' => $oeuvres,
       ));
     }
-
-    // public function vueOeuvreAction()
-    // {
-    //    $em = $this->getDoctrine()->getManager();
-
-    //    $oeuvres = $em->getRepository('RBParcoursBundle:Oeuvre')->findAll();
-
-    //   return $this->render('RBParcoursBundle:Parcours:vuePeriode.html.twig', array(
-    //       'oeuvre' => $oeuvres,
-    //   ));
-    // }
 }

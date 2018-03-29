@@ -2,6 +2,7 @@
 
 namespace RB\ParcoursBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,10 +37,37 @@ class SousPartie
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity="RB\ParcoursBundle\Entity\Periode", inversedBy="sousPartie")
+     * @var \DateTime|null
+     * 
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="RB\ParcoursBundle\Entity\Periode", inversedBy="sousParties")
      * @ORM\JoinColumn(nullable=false)
      */
     private $periode;
+
+    /**
+     * @ORM\OneToMany(targetEntity="RB\ParcoursBundle\Entity\Oeuvre", mappedBy="sousPartie")
+     */
+    private $oeuvres;
+
+    /**
+     * @ORM\Column(name="nb_oeuvres", type="integer")
+     */
+    private $nbOeuvres = 0;
+
+    /**
+     * Constructeur
+     * 
+     * Permet de récupèrer un tableau de sousParties.
+     */
+    public function __construct()
+    {
+        $this->oeuvres = new ArrayCollection();
+    }
 
     /**
      * @ORM\PrePersist
@@ -55,6 +83,39 @@ class SousPartie
     public function decrease()
     {
         $this->getPeriode()->decreaseSousPartie();
+    }
+
+    /**
+     * Callback qui met à jour la date de la dernière édition.
+     *
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+
+    {
+
+        $this->setUpdatedAt(new \Datetime());
+
+    }
+
+    /**
+     * Incrémente nbOeuvres.
+     *
+     * 
+     */
+    public function increaseOeuvre()
+    {
+        $this->nbOeuvres++;
+    }
+
+    /**
+     * Décrémente nbOeuvres.
+     *
+     * 
+     */
+    public function decreaseOeuvre()
+    {
+        $this->nbOeuvres--;
     }
 
     /**
