@@ -5,24 +5,29 @@ namespace RB\ParcoursBundle\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\DataFixtures\ReferenceRepository;
 use RB\ParcoursBundle\Entity\Image;
 use RB\ParcoursBundle\Entity\Oeuvre;
 
-class LoadImage implements FixtureInterface
+class LoadImage       
+    extends AbstractFixture 
+    implements OrderedFixtureInterface
 {
     //Dans l'argument de la méthode load, l'objet $manager est l'EntityManager
     public function load(ObjectManager $manager)
     {
 
-        $images1 = array(
+//Periode 1
+        $images = array(
             "1.jpg" => "battage_du_ble",
             "2.jpg" => "fonds_marins",
             "3.jpg" => "paysanne",
             "4.jpg" => "pecheurs",
-            "5.jpg" => "silhouettes"
-        );
+            "5.jpg" => "silhouettes",
 
-        $images2 = array(
+//Periode 2
             "6.jpg" => "allegorie_de_la_femme_fregate",
             "7.jpg" => "amazone",
             "8.jpg" => "amethystes",
@@ -41,9 +46,8 @@ class LoadImage implements FixtureInterface
             "21.jpg" => "totem",
             "22.jpg" => "totem",
             "23.jpg" => "la_chevalerie",
-        );
 
-        $images3 = array(
+//Periode 3
             "24.jpg" => "ecriture",
             "25.jpg" => "grattages",
             "26.jpg" => "la_guerre_fleurie",
@@ -59,9 +63,8 @@ class LoadImage implements FixtureInterface
             "36.jpg" => "tenochtitlan",
             "37.jpg" => "tracages_et_empreintes",
             "38.jpg" => "tracages_et_empreintes",
-        );
 
-        $images4 = array(
+//Periode 4
             "39.jpg" => "",
             "40.jpg" => "",
             "41.jpg" => "",
@@ -76,9 +79,7 @@ class LoadImage implements FixtureInterface
             "50.jpg" => "",
             "51.jpg" => "",
 
-        );
-
-        $images5 = array(
+//Periode 5
             "52.jpg" => "Le Robot",
             "53.jpg" => "",
             "54.jpg" => "",
@@ -94,9 +95,8 @@ class LoadImage implements FixtureInterface
             "64.jpg" => "",
             "65.jpg" => "",
             "66.jpg" => "",
-        );
 
-        $images6 = array(
+//Periode 6
             "67.jpg" => "bois_flottants",
             "68.jpg" => "foot_ball",
             "69.jpg" => "la_meule",
@@ -108,9 +108,9 @@ class LoadImage implements FixtureInterface
             "75.jpg" => "sans_titre",
             "76.jpg" => "",
             "77.jpg" => "",
-        );
 
-        $images7 = array(
+//Periode 7
+
             "78.jpg" => "",
             "79.jpg" => "",
             "80.jpg" => "",
@@ -122,99 +122,39 @@ class LoadImage implements FixtureInterface
             "86.jpg" => "",
         );
 
-        foreach($images1 as $cle1 => $valeur1)
+        $i=1;
+
+        foreach($images as $cle1 => $valeur1)
         {
-            $image1 = new Image();
-            $image1->setChemin($cle1);
-            $image1->setAlt($valeur1);
+            $image = new Image();
+            $image->setChemin($cle1);
+            $image->setAlt($valeur1);
 
-            $oeuvre1 = new Oeuvre();
-            $oeuvre1->setTitre($valeur1);
-            $oeuvre1->setImage($image1);
+            $oeuvre = new Oeuvre();
+            $oeuvre->setTitre($valeur1);
+            $oeuvre->setImage($image);
 
-            $manager->persist($oeuvre1);
+            $this->addReference('oeuvre'.$i.'' , $oeuvre);
+
+            $manager->persist($oeuvre);
+
+            $i++;
         }
 
-        foreach($images2 as $cle1 => $valeur1)
-        {
-            $image2 = new Image();
-            $image2->setChemin($cle1);
-            $image2->setAlt($valeur1);
-
-            $oeuvre2 = new Oeuvre();
-            $oeuvre2->setTitre($valeur1);
-            $oeuvre2->setImage($image2);
-            
-            $manager->persist($oeuvre2);
-        }
-
-        foreach($images3 as $cle1 => $valeur1)
-        {
-            $image3 = new Image();
-            $image3->setChemin($cle1);
-            $image3->setAlt($valeur1);
-
-            $oeuvre3 = new Oeuvre();
-            $oeuvre3->setTitre($valeur1);
-            $oeuvre3->setImage($image3);
-            
-            $manager->persist($oeuvre3);
-        }
-
-        foreach($images4 as $cle1 => $valeur1)
-        {
-            $image4 = new Image();
-            $image4->setChemin($cle1);
-            $image4->setAlt($valeur1);
-
-            $oeuvre4 = new Oeuvre();
-            $oeuvre4->setTitre($valeur1);
-            $oeuvre4->setImage($image4);
-            
-            $manager->persist($oeuvre4);
-        }
-
-        foreach($images5 as $cle1 => $valeur1)
-        {
-            $image5 = new Image();
-            $image5->setChemin($cle1);
-            $image5->setAlt($valeur1);
-
-            $oeuvre5 = new Oeuvre();
-            $oeuvre5->setTitre($valeur1);
-            $oeuvre5->setImage($image5);
-            
-            $manager->persist($oeuvre5);
-        }
-
-        foreach($images6 as $cle1 => $valeur1)
-        {
-            $image6 = new Image();
-            $image6->setChemin($cle1);
-            $image6->setAlt($valeur1);
-
-            $oeuvre6 = new Oeuvre();
-            $oeuvre6->setTitre($valeur1);
-            $oeuvre6->setImage($image6);
-            
-            $manager->persist($oeuvre6);
-        }
-
-        foreach($images7 as $cle1 => $valeur1)
-        {
-            $image7 = new Image();
-            $image7->setChemin($cle1);
-            $image7->setAlt($valeur1);
-
-            $oeuvre7 = new Oeuvre();
-            $oeuvre7->setTitre($valeur1);
-            $oeuvre7->setImage($image7);
-            
-            $manager->persist($oeuvre7);
-        }        
         //on enregistre tout
         $manager->flush();
     }
+
+  /**
+  * Get the order of this fixture
+  * 
+  * @return integer
+  */
+  public function getOrder()
+  {
+    return 1;
+  }
+
 }
 
 ?>
