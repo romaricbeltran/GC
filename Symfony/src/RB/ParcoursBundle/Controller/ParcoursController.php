@@ -27,8 +27,8 @@ class ParcoursController extends Controller
         $em = $this->getDoctrine()->getManager();
         $periodes = $em->getRepository('RBParcoursBundle:Periode')->findBy(
       array(),                 // Pas de critère
-      array('id' => 'asc'), // On trie par date décroissante
-      $limit,                  // On sélectionne $limit annonces
+      array('id' => 'asc'),    // On trie par date croissante
+      $limit,                  // On sélectionne $limit de périodes
       0                        // À partir du premier
       );
 
@@ -48,7 +48,7 @@ class ParcoursController extends Controller
 
        $sousParties=$em->getRepository('RBParcoursBundle:SousPartie')->findBy(array('periode' => $periode));
 
-       $oeuvres=$em->getRepository('RBParcoursBundle:Oeuvre')->findBy(array('sousPartie' => $sousParties));  // ne retourne qu'un tableau d'oeuvres alors qu'il doit retourner un tableau par sousParties
+       $oeuvres=$em->getRepository('RBParcoursBundle:Oeuvre')->findBy(array('sousPartie' => $sousParties));
 
 
         return $this->render('RBParcoursBundle:Parcours:vuePeriode.html.twig', array(

@@ -7,15 +7,13 @@
 <p>Parcours Pictural...</p>
 
 
+<img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvres|first.image.chemin ~ '') }}" alt="{{ oeuvres|first.image.alt }}">
+
 <p>{{periode.titre}} {{periode.date}}</p>
 
 
     <div>
 </br>
-
-{# {% for oeuvre in oeuvres %}
-{{ dump(oeuvre) }}
-{% endfor %} #}
 
 </br>
 </br>
@@ -29,7 +27,7 @@
             {{ sousPartie.titre }} {{sousPartie.description }} 
 </br>
 </br>
-            {% for oeuvre in oeuvres %}
+            {% for oeuvre in oeuvres if oeuvre.sousPartie == sousPartie %}
         {{ oeuvre.image.chemin }}
                     {{ oeuvre.titre }} <img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}" width="60">
     
