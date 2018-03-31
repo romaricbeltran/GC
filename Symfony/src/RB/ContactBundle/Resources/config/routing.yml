@@ -1,3 +1,5 @@
 RB_contact_home:
     path:     /
-    defaults: { _controller: RBContactBundle:Contact:index }
+    defaults: { _controller: RBContactBundle:Contact:contact }
+    requirements:
+        _method:  GET

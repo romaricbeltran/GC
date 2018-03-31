@@ -1,4 +1,12 @@
 services:
-#    rb_contact.example:
-#        class: RB\ContactBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    rb_contact.email.contact_mailer:
+        class: RB\ContactBundle\Email\ContactMailer
+        arguments:
+          - "@mailer"
+
+    rb_contact.doctrine_listener.contact_creation:
+        class: RB\ContactBundle\DoctrineListener\ContactCreationListener
+        arguments:
+          - "@rb_contact.email.contact_mailer"
+        tags:
+          - { name: doctrine.event_listener, event: postPersist }
