@@ -19,22 +19,133 @@
 
     <!----------------------- BLOC : Choix période ---------------------->
 
- {% for periode in periodes %}
+    <!----------------------- A reactiver apres la creation du "booleen" oeuvre_principale dans l'entite oeuvre ---------------------->
+
+{#  {% for periode in periodes %}
         <div class="parcourspictural">
             <a href="{{ path('RB_parcours_vue_periode', {'id': periode.id}) }}">
             <div class="bloc1"> 
-                <img src="" alt="genevieve_cornu"/>
+                <img src="{{ asset('bundles/rbparcours/images/periode1/4.jpg') }}" alt="genevieve_cornu"/>
             </div>
 
             <div class="bloc2">
                 <div>
                     <h2>{{ periode.titre }}</h2>
-                    <p>{% if periode.date is not null %}, {{ periode.date }}{% endif %}</p>
+                    <p>{% if periode.date is not null %}{{ periode.date }}{% endif %}</p>
                 </div>
             </div>
             </a>
         </div>
- {% endfor %}
+ {% endfor %} #}
+
+
+
+    <!----------------------- BLOC : Choix période ---------------------->
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 1}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode1/4.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Objets et surfaces</h2>
+                <p>1958 - 1970</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 2}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode2/10.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Recherche de structures</h2>
+                <p>1970 - 1975</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 3}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode3/25.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Ecritures - Signes</h2>
+                <p>1975 - 1985</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 4}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode4/40.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Dialogue de la Peinture et de la Poésie</h2>
+                <p>1990 - 2005</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 5}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode5/53.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Formes intuitives</h2>
+                <p>2005</p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 6}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode6/67.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Construction des objets mentaux</h2>
+                <p></p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="parcourspictural">
+        <a href="{{ path('RB_parcours_vue_periode', {'id': 7}) }}">
+        <div class="bloc1"> 
+            <img src="{{ asset('bundles/rbparcours/images/periode7/78.jpg') }}" alt="genevieve_cornu"/>
+        </div>
+
+        <div class="bloc2">
+            <div>
+                <h2>Narration fantastique</h2>
+                <p></p>
+            </div>
+        </div>
+        </a>
+    </div>
 
 
 {% endblock %}

@@ -4,13 +4,8 @@
 
 {% block body %}
 
-<p>Parcours Pictural...</p>
 
+<img src="{{ asset('bundles/rbparcours/images/periode3/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}">
 
-{% for oeuvre in oeuvre %}
-
-<img src="{{ asset('bundles/rbparcours/images/periode3/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}" width="60">
-
-{% endfor %}
 
 {% endblock %}

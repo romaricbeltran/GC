@@ -51,6 +51,7 @@ footer h3 {
 
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 40px;
 }
 
 
@@ -67,9 +68,10 @@ footer h3 {
     background-color: #2B886B;
 
     width: 300px;
-    height: 100px;
+    height: 135px;
+    position: absolute;
 
-    transform: translateY(-120%); /* tirer bloc de sa propre hauteur */
+    transform: translateY(-90%); /* tirer bloc de sa propre hauteur */
 
     text-align: center;
 }

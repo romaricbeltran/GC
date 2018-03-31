@@ -43,14 +43,14 @@
             <p>{{sousPartie.description }}</p>
         </div>
 
-    {% for oeuvre in oeuvres if oeuvre.sousPartie == sousPartie %}
     <!----------------------- BLOC 2.2 : Sous-partie - Oeuvres ---------------------->
 
         <div class="oeuvres"> 
-                <img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}"/>
+    {% for oeuvre in oeuvres if oeuvre.sousPartie == sousPartie %}
+                <a href="{{ path('RB_parcours_vue_oeuvre', {'id': oeuvre.id}) }}"><img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}"/></a>
+    {% endfor %}
         </div>
 
-    {% endfor %}
 
 
 {% endfor %}

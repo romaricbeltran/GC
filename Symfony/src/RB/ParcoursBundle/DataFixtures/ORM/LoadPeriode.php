@@ -22,7 +22,7 @@ class LoadPeriode
             'Objets et surfaces' => '1958 - 1970',
             'La recherche de structures' => '1970 - 1975',
             'Ecritures-Signes' => '1975 - 1985',
-            'Dialogue de la Peinture et de la Poesie' => '1900 - 2005',
+            'Dialogue de la Peinture et de la Poesie' => '1990 - 2005',
             'Les Formes intuitives' => '2005',
             'Construction des objets mentaux' => null,
             'Narration fantastique' => null,

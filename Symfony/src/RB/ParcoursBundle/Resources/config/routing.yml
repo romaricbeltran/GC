@@ -7,3 +7,9 @@ RB_parcours_vue_periode:
     defaults: { _controller: RBParcoursBundle:Parcours:vuePeriode }
     requirements:
         id: \d+
+
+RB_parcours_vue_oeuvre:
+    path:     /periode/oeuvre/{id}
+    defaults: { _controller: RBParcoursBundle:Parcours:vueOeuvre }
+    requirements:
+        id: \d+

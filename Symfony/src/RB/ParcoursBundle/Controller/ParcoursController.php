@@ -63,4 +63,20 @@ class ParcoursController extends Controller
           'oeuvres' => $oeuvres,
       ));
     }
+
+
+    public function vueOeuvreAction($id)
+    {
+       $em = $this->getDoctrine()->getManager();
+
+
+       $oeuvre=$em->getRepository('RBParcoursBundle:Oeuvre')->find($id);
+
+       $periode=$oeuvre->getSousPartie()->getPeriode()->getId();
+
+        return $this->render('RBParcoursBundle:Parcours:vueOeuvre.html.twig', array(
+          'oeuvre' => $oeuvre,
+          'periode' => $periode,
+      ));
+    }
 }
