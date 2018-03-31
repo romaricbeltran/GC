@@ -2,38 +2,60 @@
 
 {% extends "CoreBundle::layout.html.twig" %}
 
-{% block body %}
 
-<p>Parcours Pictural...</p>
+{% block stylesheets %}
+
+    <!----------------------- CSS ---------------------->
+{% stylesheets filter='?scssphp' 'bundles/rbparcours/css/periode.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
 
 
-<img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvres|first.image.chemin ~ '') }}" alt="{{ oeuvres|first.image.alt }}">
-
-<p>{{periode.titre}} {{periode.date}}</p>
-
-
-    <div>
-</br>
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-        {% for sousPartie in sousParties %}
-            {{ sousPartie.titre }} {{sousPartie.description }} 
-</br>
-</br>
-            {% for oeuvre in oeuvres if oeuvre.sousPartie == sousPartie %}
-        {{ oeuvre.image.chemin }}
-                    {{ oeuvre.titre }} <img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}" width="60">
-    
-</br>
-            {% endfor %}
-        {% endfor %}
-    </div>
 
 {% endblock %}
+
+
+
+{% block body %}
+
+
+    <!----------------------- BLOC 1 : Titre ---------------------->
+
+        <div class="titre">
+            
+            <div class="column1"> 
+                <img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvres|first.image.chemin ~ '') }}" alt="{{ oeuvres|first.image.alt }}"/>
+            </div>
+
+            <div class="column2">
+                <h1>{{periode.titre}}</h1>
+                <h2>{{periode.date}}</h2>
+            </div>
+        </div>
+
+
+    <!----------------------- BLOC 2.1 : Sous-partie - Texte ---------------------->
+
+{% for sousPartie in sousParties %}
+
+        <div class="texte">
+            <h2>{{ sousPartie.titre }}</h2>
+            <p>{{sousPartie.description }}</p>
+        </div>
+
+    {% for oeuvre in oeuvres if oeuvre.sousPartie == sousPartie %}
+    <!----------------------- BLOC 2.2 : Sous-partie - Oeuvres ---------------------->
+
+        <div class="oeuvres"> 
+                <img src="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '/' ~ oeuvre.image.chemin ~ '') }}" alt="{{ oeuvre.image.alt }}"/>
+        </div>
+
+    {% endfor %}
+
+
+{% endfor %}
+
+
+
+{% endblock %}
+

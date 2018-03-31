@@ -1,16 +1,40 @@
+{# Parcours #}
 {# Cette  est une extension de layout.html.twig, en ouvrant les blocks définis dans la  mère on peut spécifier le code #}
 
 {% extends "CoreBundle::layout.html.twig" %}
 
+
+{% block stylesheets %}
+
+    <!----------------------- CSS ---------------------->
+{% stylesheets filter='?scssphp' 'bundles/rbparcours/css/parcours.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+
+{% endblock %}
+
+
+
 {% block body %}
 
+    <!----------------------- BLOC : Choix période ---------------------->
 
-    <div>
-      <ul>
-        {% for periode in periodes %}
-            <li><a href="{{ path('RB_parcours_vue_periode', {'id': periode.id}) }}">{{ periode.titre }}{% if periode.date is not null %}, {{ periode.date }}{% endif %}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
+ {% for periode in periodes %}
+        <div class="parcourspictural">
+            <a href="{{ path('RB_parcours_vue_periode', {'id': periode.id}) }}">
+            <div class="bloc1"> 
+                <img src="" alt="genevieve_cornu"/>
+            </div>
+
+            <div class="bloc2">
+                <div>
+                    <h2>{{ periode.titre }}</h2>
+                    <p>{% if periode.date is not null %}, {{ periode.date }}{% endif %}</p>
+                </div>
+            </div>
+            </a>
+        </div>
+ {% endfor %}
+
 
 {% endblock %}

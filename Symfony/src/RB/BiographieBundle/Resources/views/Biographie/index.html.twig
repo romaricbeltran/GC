@@ -1,9 +1,61 @@
+{# Biographie #}
 {# Cette  est une extension de layout.html.twig, en ouvrant les blocks définis dans la  mère on peut spécifier le code #}
 
 {% extends "CoreBundle::layout.html.twig" %}
 
-{% block body %}
 
-<p>Biographie...</p>
+    {% block stylesheets %}
 
-{% endblock %}
+    <!----------------------- CSS ---------------------->
+
+{% stylesheets filter='?scssphp' 'bundles/rbbiographie/css/biographie.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+
+
+    {% endblock %}
+
+
+    {% block body %}
+
+    <!----------------------- BLOC 1 : Photo et citation ---------------------->
+
+        <div class="biographie">
+            
+            <div class="column1"> 
+                <img src="{{ asset('bundles/core/Images/genevieve_cornu.jpg') }}" alt="genevieve_cornu"/>
+            </div>
+
+            <div class="column2">
+                <h1> 
+                Geneviève Cornu </br>
+                Artiste picturale et écrivaine
+                </h1>
+            </div>
+        </div>
+
+
+    <!----------------------- BLOC 2 : Texte ---------------------->
+
+        <div>
+            <p class="texte">
+            Je suis née en terre quercynoise. Mes poèmes et mes peintures s’en nourrissent, sites rupestres, eaux profondes, bêtes et gens, vision empreinte de tendresse. Je suis née de Paris, la ville qui m’a aidée à penser et à grandir : découvertes à travers les musées, une initiation qui m’a tenu lieu d’Ecole des Beaux Arts. Comme tout enrichissement culturel, les voyages ouvrent en moi des sensations et des émotions inattendues.
+            </br></br>
+            La création m’a toujours intéressée. Institutrice, j’ai collecté des dessins d’enfants ; Universitaire, j’ai fondé ma recherche sur les questions liées à l’expression artistique. Mon autonomie matérielle assurait ma liberté pour mener cette aventure nécessaire, car je m’interrogeais souvent sur les raisons qui me guidaient selon les circonstances, de la peinture à la poésie.
+            </br></br>
+            Ce livre est essentiellement consacré à l’oeuvre picturale qui recouvre cinquante années de création (1960-2010). Porté par une nécessité intérieure, chaque tableau naît d’un désir, il n’est pas du tout pensé à l’avance, il n’est précédé d’aucun croquis.
+            </br></br>
+            Au cours des années, mon oeuvre a évolué, de telle sorte que j’ai pu a posteriori distinguer des périodes : ce répertoire sans doute bien incomplet permet une lecture de l’ensemble de telle sorte que nous pouvons distinguer les moments de rupture qui marquent la dynamique de toute création inquiète.
+            </br></br>
+            Car l’inquiétude accompagne le bonheur ludique lorsque le geste ouvre l’aventure du « faire ». C’est un parcours ponctué d’arrêts, où il faut choisir entre les possibilités multiples de l’expression jusqu’au moment où l’objet artistique apporte une lecture non linéaire, faite de tours, de détours et d’impressions diverses, soutenue par une imagination sensible, voire sensuelle, fondée sur l’apport fructueux des rencontres foisonnantes : livres, sciences, voyages, émotions, batailles, douleurs, contemplation. Tout peut enrichir ce terreau d’où inconsciemment, germera l’oeuvre.
+            </br></br>
+            Au bout de la main, la sensibilité cherche sa voie sur la surface ; une sensibilité en alerte pour reconnaître la rencontre qui va inspirer le choix somnambulique des matières, des lignes et des couleurs. Attention et tension accompagnent chaque moment de ce travail qui ne peut durer plus d’une heure et doit être repris après chaque lecture des effets obtenus. Lecture qui est absorption, contemplation, dont il faut sortir comme régénérée afin de reprendre le voyage avec plus de force, sans risque de se perdre.
+            </br></br>
+            La poésie est une fonction qui hante chaque oeuvre lorsqu’elle est créée sans projet élaboré d’avance, dans une pulsion d’expulsion (plutôt qu’inspiration) qui permet la mise à distance de ce qui a précédé, évite le ressassement, exige d’aller plus loin dans l’exploration. Cette expression sans énoncé, sans message explicite, est à mon sens le principe vivant qui fonde l’attitude poétique et donne aux oeuvres leur dimension artistique.
+            </br></br>
+            Chaque tableau est une aventure qui prend fin lorsque par la lecture contemplative s’établit une sensation de bonheur. C’est alors que je reconnais la qualité métaphorique de l’oeuvre : d’un motif à l’autre sur la toile s’établit un jeu de correspondances mouvant, une forme par exemple suggérera le masque ou la semence, les rites exotiques ou les silhouettes surgies de la terre, un monde peuplé d’objets étranges…. Et selon l’interprétation du motif, toute la scène se métamorphose. Ces motifs s’animent, ce sont des signes vivants, la marque même d’une création singulière.
+            </p>
+        </div>
+
+
+    {% endblock %}

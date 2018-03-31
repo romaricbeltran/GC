@@ -17,8 +17,14 @@ class ParcoursController extends Controller
         $em=$this->getDoctrine()->getManager();
         $listPeriodes=$em->getRepository('RBParcoursBundle:Periode')->findAll();
 
+        $sousParties=$em->getRepository('RBParcoursBundle:SousPartie')->findBy(array('periode' => $listPeriodes));
+
+        $oeuvres=$em->getRepository('RBParcoursBundle:Oeuvre')->findBy(array('sousPartie' => $sousParties));
+
         return $this->render('RBParcoursBundle:Parcours:index.html.twig', array(
-            'periodes' => $listPeriodes, 
+            'periodes' => $listPeriodes,
+            'sousParties' => $sousParties,
+            'oeuvres' => $oeuvres,
         ));
     }
 

@@ -1,7 +1,6 @@
 /*
 *Author : Diana Portela
 *Email : diana.portela@outlook.fr
-
 *SOMMAIRE 
 *1. Typographie
 *2. Administrateur
@@ -56,10 +55,6 @@ footer h3 {
 /*============================ HEADER ============================*/
 
 /* Position */
-nav {
-    text-align: left; /* alignement horizontal à gauche */
-}
-
 nav ul {
     list-style: none; /* enlever les puces */
     display: inline-block; /* alignement horizontal */
@@ -69,30 +64,46 @@ nav li {
     display: inline-block; /* alignement horizontal */
 }
 
-.menu {
-    margin-left: 550px;
-    margin-right: 50px;
+nav .menu li {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.menu li {
-    padding-left: 70px;
+nav .menu {
+    float: right; /* alignement menu à droite > 600px */
+}
+
+/* Responsive */
+@media screen and (max-width:850px) { /* écrans < 900px */
+    nav .menu li {
+        display: inline; /* supprimer aligement horizontal pour revenir à la ligne */
+
+        padding-left: 8px;
+        padding-right: 8px;
+ }
+}
+
+@media screen and (max-width:600px) { /* écrans < 600px */
+    nav .menu {
+        float: none; /* supprimer alignement menu à droite */
+ }
 }
 
 
 /* Style logo (liens) */
-.logo a {
+nav .logo a {
     color: black;
     text-decoration: none;
 }
 
 
 /* Style menu (liens) */
-.menu a {
+nav .menu a {
     color: black;
     text-decoration: none;
 }
 
-.menu a:hover  {
+nav .menu a:hover  {
     color: #993A74;
 }
 
@@ -108,6 +119,9 @@ footer {
     text-align: center; /* centrage horizontal */
 }
 
+footer .realisation p {
+    text-align: center; /* centrage horizontal sur realisation uniquement car ne fonctionne pas */
+}
 
 /* Position */
 footer div {
@@ -119,6 +133,22 @@ footer div {
 
 footer .column {
     width: 20%; /* répartition des colonnes */
+}
+
+
+/* Responsive */
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    footer div {
+        display: block; /* supprimer aligement horizontal pour revenir à la ligne */
+        margin: 0 auto;
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    footer .column {
+        width:60%;
+        margin-bottom: 50px;
+ }
 }
 
 
@@ -146,3 +176,11 @@ footer div img {
     border-style: solid;
     border-color: #2B886B;
 }
+
+/* Espace mentions légales et plan du site */
+
+footer .autres a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
