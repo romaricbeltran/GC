@@ -72,11 +72,48 @@ footer h3 {
 
 .biographie .column1 {
     width: 20%; /* répartition des colonnes */
+
 }
 
 .biographie .column2 {
     width: 45%; /* répartition des colonnes */
     text-align: justify; /* centrage horizontal texte */
+}
+
+
+/* Responsive column1 */
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column1 {
+        display: inline; /* supprimer aligement horizontal pour revenir à la ligne */
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column1 img {
+        margin-top: 100px; /* car margin div globale non applicable */
+ }
+}
+
+/* Responsive column2 */
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column2 {
+        display: inline; /* supprimer aligement horizontal pour revenir à la ligne */
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column2 p {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column2 a {
+        margin-bottom: 100px; /* car margin div globale non applicable */
+ }
 }
 
 
@@ -123,17 +160,22 @@ transforme pas */
 
 .parcourspictural div {
     height: 150px;
-    width: 985px;
+    max-width: 69%;
 
-    margin-left:220px;
-    margin-right:220px;
-
+    margin:0 auto;
     margin-bottom: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width:1000px) { /* écrans < 1000px */
+    .parcourspictural div {
+        margin-bottom: 100px;
+ }
 }
 
 /* Style parcours pictural */
 .parcourspictural div {
-    background-image: ;
+    background-image: url(GC.jpg);
 }
 
 .parcourspictural a {
@@ -143,6 +185,7 @@ transforme pas */
 
 
 .parcourspictural div:hover {
+    background-image: none;
     background-color: #993A74;
 }
 
@@ -163,13 +206,22 @@ transforme pas */
     display: inline-block; /* alignement horizontal */
 
     height: 150px;
-    width: 300px;
+    width: 21%;
 
     margin-left:20px;
     margin-right:20px;
 
     margin-bottom: 100px;
 }
+
+
+/* Responsive */
+@media screen and (max-width:1000px) { /* écrans < 1000px */
+    .ecrits div {
+        width:69%;
+ }
+}
+
 
 /* Style ecrits */
 .ecrits div {
