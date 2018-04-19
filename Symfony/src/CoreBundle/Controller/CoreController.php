@@ -23,5 +23,4 @@ class CoreController extends Controller
         return $this->render('CoreBundle:Core:plan.html.twig');
     }
 
-
 }
