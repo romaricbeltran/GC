@@ -35,7 +35,6 @@ implements OrderedFixtureInterface
         $sousPartie13 = $this->getReference('sous_partie13');
         $sousPartie14 = $this->getReference('sous_partie14');
         $sousPartie15 = $this->getReference('sous_partie15');
-        $sousPartie16 = $this->getReference('sous_partie16');
 
 //Periode 1
     //SousPartie 1
@@ -152,11 +151,11 @@ implements OrderedFixtureInterface
 //Periode 6
     //SousPartie 1
         $images13 = array(
-            "67.jpg" => "bois_flottants",
+            "67.jpg" => "pink_floyd",
             "68.jpg" => "foot_ball",
-            "69.jpg" => "la_meule",
-            "70.jpg" => "paysage_au_pin",
-            "71.jpg" => "pink_floyd",
+            "69.jpg" => "bois_flottants",
+            "70.jpg" => "la_meule",
+            "71.jpg" => "",
         );
     //SousPartie 2
         $images14 = array(
@@ -164,25 +163,19 @@ implements OrderedFixtureInterface
             "73.jpg" => "",
             "74.jpg" => "",
             "75.jpg" => "sans_titre",
-            "76.jpg" => "",
-            "77.jpg" => "",
         );
 
-//Periode 7
-    //SousPartie 1
+    //SousPartie 3
         $images15 = array(
+            "76.jpg" => "",
+            "77.jpg" => "",
             "78.jpg" => "",
             "79.jpg" => "",
             "80.jpg" => "",
             "81.jpg" => "",
             "82.jpg" => "",
             "83.jpg" => "",
-        );
-    //SousPartie 2
-        $images16 = array(
             "84.jpg" => "",
-            "85.jpg" => "",
-            "86.jpg" => "",
         );
 
 
@@ -528,29 +521,6 @@ implements OrderedFixtureInterface
             $i++;
 
             if ($i >= 83)
-                {
-                    break 1;
-                }
-        }
-
-        foreach($images16 as $cle => $valeur)
-        {
-    
-            $image16 = new Image();
-            $image16->setChemin($cle);
-            $image16->setAlt($valeur);
-
-            $oeuvre16 = new Oeuvre();
-            $oeuvre16->setTitre($valeur);
-            $oeuvre16->setImage($image16);
-
-            $oeuvre16->setSousPartie($sousPartie16);
-            $oeuvre16->getSousPartie()->increaseOeuvre();
-
-            $manager->persist($oeuvre16);
-            $i++;
-
-            if ($i >= 86)
                 {
                     break 1;
                 }

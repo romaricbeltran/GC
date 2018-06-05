@@ -19,13 +19,12 @@ class LoadPeriode
     {
 
         $periodes = array(
-            'Objets et surfaces' => '1958 - 1970',
-            'La recherche de structures' => '1970 - 1975',
-            'Ecritures-Signes' => '1975 - 1985',
-            'Dialogue de la Peinture et de la Poesie' => '1990 - 2005',
-            'Les Formes intuitives' => '2005',
-            'Construction des objets mentaux' => null,
-            'Narration fantastique' => null,
+            'I-Objets et surfaces' => '1958 - 1970',
+            'II-La recherche de structures' => '1970 - 1975',
+            'III-Ecritures-Signes' => '1975 - 1985',
+            'IV-Dialogue de la Peinture et de la Poesie' => '1990 - 2005',
+            'V-Les Formes intuitives' => '2005',
+            'VI-Visible - Invisible' => null,
         );
 
         $i=1;
