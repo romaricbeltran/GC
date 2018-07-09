@@ -4,6 +4,47 @@
 
 {% block body %}
 
-<p>Désolé, cette page n'est pas encore disponible ! Nous développons actuellement le site, revenez donc de temps en temps afin de voir les nouveautés. L'ensemble du site sera disponible pour juillet 2018.</p>
+<div>
+	<em><strong>Poèmes</strong></em>
+
+	<ul>
+		{% for poeme in poemes %}
+
+		<li>
+			<a href="{{ asset('bundles/rbecrit/textes/Poemes/' ~ poeme.chemin ~ '') }}" alt="{{ poeme.chemin }}"> {{ poeme.chemin }} </a>
+		</li>
+
+		{% endfor %}
+	</ul>
+</div>
+
+
+<div>
+	<em><strong>Ecrits Théoriques</strong></em>
+
+	<ul>
+		{% for ecrit in ecrits %}
+
+		<li>
+			<a href="{{ asset('bundles/rbecrit/textes/Ecrits_Theoriques/' ~ ecrit.chemin ~ '') }}" alt="{{ ecrit.chemin }}"> {{ ecrit.chemin }} </a>
+		</li>
+
+		{% endfor %}
+	</ul>
+</div>
+
+<div>
+	<em><strong>Romans et Nouvelles</strong></em>
+
+	<ul>
+		{% for roman in romans %}
+
+		<li>
+			<a href="{{ asset('bundles/rbecrit/textes/Romans_Nouvelles/' ~ roman.chemin ~ '') }}" alt="{{ roman.chemin }}"> {{ roman.chemin }} </a>
+		</li>
+
+		{% endfor %}
+	</ul>
+</div>
 
 {% endblock %}
