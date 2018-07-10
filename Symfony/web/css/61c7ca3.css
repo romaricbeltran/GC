@@ -1,1 +1,105 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis');Sélecteur{font-family:'Dosis', sans-serif}*{font-family:'Dosis', sans-serif}* h1{font-size:40px}* h2{font-size:25px}* p{font-size:15px}* a{font-size:15px}footer h3{font-size:20px}.biographie div{display:inline-block;vertical-align:middle;}.biographie .column1 img{max-width:700px;height:650px;object-fit:cover;}.biographie .column2{width:600px;height:650px;text-height:100px;padding-left:50px;padding-right:50px}@media screen and (max-width:1300px){}@media screen and (max-width:1300px){}.biographie .column2{background-color:#2b886b;color:white;text-decoration:none}div .texte{width:70%;margin:0 auto;margin-bottom:100px;margin-top:100px;text-align:justify}
+/*
+*Author : Diana Portela
+*Email : diana.portela@outlook.fr
+*SOMMAIRE 
+*1. Typographie
+*2. Bloc 1 : Photo et citation
+*3. Bloc 2 : Texte
+*/
+
+/*============================ TYPOGRAPHIE ============================*/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+Sélecteur {
+    font-family: 'Dosis', sans-serif;
+}
+
+/* Appliquer la typographie à l'ensemble de la page */
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+/* H1, H2, p et a sur l'ensemble de la page */
+* h1 {
+    font-size: 40px;
+}
+
+* h2 {
+    font-size: 25px;
+}
+
+* p {
+    font-size: 15px;
+}
+
+* a {
+    font-size: 15px;
+}
+
+/* H3 sur footer uniquement */
+footer h3 {
+    font-size: 20px;
+}
+
+
+/*============================ BLOC 1 : Photo et citation ============================*/
+
+/* Position */
+.biographie div {
+    display: inline-block; /* alignement horizontal */
+    vertical-align: middle; /* centrage vertical général */
+}
+
+.biographie .column1 img {
+    max-width: 700px; /* column2 = 600 width + 50 + 50 padding */
+    height: 650px;
+
+   object-fit: cover; /* rogner */
+}
+
+.biographie .column2 {
+    width: 600px;
+    height: 650px;
+
+    text-height: 100px; /* centrage vertical texte */
+
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+/* Responsive */
+@media screen and (max-width:1300px) { /* écrans < 800px */
+    .biographie .column1 {
+
+ }
+}
+
+@media screen and (max-width:1300px) { /* écrans < 800px */
+    .biographie .column2 {
+
+ }
+}
+
+
+/* Style colonne 2 */
+.biographie .column2 {
+    background-color: #2B886B;
+
+    color: white;
+    text-decoration: none;
+}
+
+
+/*============================ BLOC 2 : Texte ============================*/
+
+div .texte {
+    width: 70%; /* taille horizontale du texte */
+
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+   text-align: justify;
+}

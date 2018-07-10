@@ -2,6 +2,16 @@
 
 {% extends "CoreBundle::layout.html.twig" %}
 
+{% block stylesheets %}
+
+    <!----------------------- CSS ---------------------->
+{% stylesheets filter='?scssphp' 'bundles/rbcontact/css/contact.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+
+{% endblock %}
+
+
 {% block body %}
 
 {% for label, messages in app.flashes %}

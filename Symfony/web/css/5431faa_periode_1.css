@@ -94,6 +94,14 @@ footer h3 {
 
 /*============================ BLOC 2.2 : Sous-partie - Oeuvres ============================*/
 
+.oeuvres {
+    text-align: center;
+}
+
+.oeuvres a {
+    margin: 0 10px;
+}
+
 .oeuvres img {
     width: 200px;
     height: 200px;

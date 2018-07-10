@@ -2,12 +2,11 @@
 
 {#  {% block stylesheets %}
   <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
-{% endblock %} #}
+  {% endblock %} #}
 
-<h3 style="text-align: center;">Contact</h3>
+  <h3 style="text-align: center;">Contact</h3>
 
 
-<div class="well">
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
 
   {# Les erreurs générales du formulaire. #}
@@ -15,64 +14,55 @@
 
   {#NOM#}
   {# Génération manuelle et éclatée : #}
-  <div class="form-group" style="font-size: 8px;margin-left: 10%;margin-top: -3%;">
+  <div class="form-group">
     {# Génération du label. #}
-    {{ form_label(form.nom, "Votre Nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_label(form.nom, "Votre Nom", {'label_attr': {'class': 'control-label'}}) }}
 
     {# Affichage des erreurs pour ce champ précis. #}
     {{ form_errors(form.nom) }}
+    {# Génération de l'input. #}
+    {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
 
-    <div class="col-sm-10">
-      {# Génération de l'input. #}
-      {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
-    </div>
   </div>
 
   {# EMAIL #}
-  <div class="form-group" style="font-size: 8px;margin-left: 10%;margin-top: 2%;">
-    {{ form_label(form.email, "Votre adresse e-mail", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+  <div class="form-group">
+    {{ form_label(form.email, "Votre adresse e-mail", {'label_attr': {'class': 'control-label'}}) }}
     {{ form_errors(form.email) }}
-    <div class="col-sm-10" style="margin-left: -23px;">
-      {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
-    </div>
+    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
   </div>
 
   {# TELEPHONE #}
-  <div class="form-group" style="font-size: 8px;margin-left: 10%;margin-top: 2%;">
-    {{ form_label(form.telephone, "Votre téléphone", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+  <div class="form-group">
+    {{ form_label(form.telephone, "Votre téléphone", {'label_attr': {'class': 'control-label'}}) }}
     {{ form_errors(form.telephone) }}
-    <div class="col-sm-10" style="margin-left: -23px;">
-      {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>  
+    {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+  </div>
 
   {# OBJET #}
-  <div class="form-group" style="font-size: 8px;margin-left: 10%;margin-top: 2%;">
-    {{ form_label(form.objet, "Objet", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+  <div class="form-group">
+    {{ form_label(form.objet, "Objet", {'label_attr': {'class': 'control-label'}}) }}
     {{ form_errors(form.objet) }}
-    <div class="col-sm-10" style="margin-left: -23px;">
-      {{ form_widget(form.objet, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>  
+    {{ form_widget(form.objet, {'attr': {'class': 'form-control'}}) }}
+  </div>
 
   {# MESSAGE #}
-  <div class="form-group" style="font-size: 8px;margin-left: 10%;margin-top: 2%;">
-    {{ form_label(form.message, "Votre message", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+  <div class="form-group" >
+    {{ form_label(form.message, "Votre message", {'label_attr': {'class': ' control-label'}}) }}
     {{ form_errors(form.message) }}
-    <div class="col-sm-10" style="margin-left: -23px;">
-      {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
-    </div>
+    {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
   </div>
 
 
   {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
-  {{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+  <div class="envoyer">
+    {{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+  </div>
 
-  {# Génération automatique des champs pas encore écrits.
-     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
-     et tous les champs cachés (type « hidden »). #}
-     {{ form_rest(form) }}
+    {# Génération automatique des champs pas encore écrits.
+    Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+    et tous les champs cachés (type « hidden »). #}
+    {{ form_rest(form) }}
 
-     {# Fermeture de la balise <form> du formulaire HTML #}
-     {{ form_end(form) }}
-   </div>
+    {# Fermeture de la balise <form> du formulaire HTML #}
+    {{ form_end(form) }}

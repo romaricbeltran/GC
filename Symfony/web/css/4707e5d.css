@@ -1,0 +1,49 @@
+/*
+*Author : Romaric Beltran
+*Email  : romaric.beltran@gmail.com
+*SOMMAIRE 
+*1. Typographie
+*/
+
+/*============================ TYPOGRAPHIE ============================*/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+Sélecteur {
+	font-family: 'Dosis', sans-serif;
+}
+
+/* Appliquer la typographie à l'ensemble de la page */
+* {
+	font-family: 'Dosis', sans-serif;
+}
+
+
+/* H1, H2, p et a sur l'ensemble de la page */
+* h1 {
+	font-size: 40px;
+}
+
+* h2 {
+	font-size: 25px;
+}
+
+* p {
+	font-size: 15px;
+}
+
+* a {
+	font-size: 15px;
+}
+
+/* H3 sur footer uniquement */
+footer h3 {
+	font-size: 20px;
+}
+
+.list {
+	position: relative;
+	width: 50%;
+	transform: translateX(-50%);
+	left: 50%;
+	word-wrap: break-word;
+}

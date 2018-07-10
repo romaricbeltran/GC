@@ -24,7 +24,7 @@ implements OrderedFixtureInterface
             "Articles.pdf",
             "L_art n_est_pas_un_langage_la_rupture_creative_2010.pdf",
             "Peinture_et_Poesie_1984.pdf",
-            "Sémiologie_de_l_image_dans_la_publicité_1990.pdf",
+            "Semiologie_de_l_image_dans_la_publicite_1990.pdf",
         );
 
 //Poemes

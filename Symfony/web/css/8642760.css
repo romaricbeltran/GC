@@ -1,1 +1,242 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis');Sélecteur{font-family:'Dosis', sans-serif}*{font-family:'Dosis', sans-serif}* h1{font-size:40px}* h2{font-size:25px}* p{font-size:15px}* a{font-size:15px}footer h3{font-size:20px}.imgfullsize img{width:100%;height:650px;object-fit:cover;}.biographie{text-align:center;}.biographie div{display:inline-block;vertical-align:middle;margin-top:100px;margin-bottom:100px}.biographie .column1{width:20%;}.biographie .column2{width:45%;text-align:justify;}@media screen and (max-width:1200px){.biographie .column1{display:inline;}}@media screen and (max-width:1200px){.biographie .column1 img{margin-top:100px;}}@media screen and (max-width:1200px){.biographie .column2{display:inline;}}@media screen and (max-width:1200px){.biographie .column2 p{width:60%;margin:0 auto;margin-top:20px;margin-bottom:20px}}@media screen and (max-width:1200px){.biographie .column2 a{margin-bottom:100px;}}.biographie .column1 img{border-width:2px;border-style:solid;border-color:#2b886b}.bouton{display:inline-block;color:#993a74;text-decoration:none;border-width:1px;border-style:solid;border-color:#993a74;padding-left:30px;padding-right:30px;padding-top:5px;padding-bottom:5px}.bouton:hover{color:white;background-color:#993a74}.parcourspictural{text-align:center;line-height:150px;}.parcourspictural div{height:150px;max-width:69%;margin:0 auto;margin-bottom:40px}@media screen and (max-width:1000px){.parcourspictural div{margin-bottom:100px}}.parcourspictural div{background-image:url('../bundles/core/Images/2.jpg')}.parcourspictural a{color:black;text-decoration:none}.parcourspictural div:hover{background-image:none;background-color:#993a74}.parcourspictural a:hover{color:white}.ecrits{text-align:center;line-height:100px;}.ecrits div{display:inline-block;height:150px;width:21%;margin-left:20px;margin-right:20px;margin-bottom:100px}@media screen and (max-width:1000px){.ecrits div{width:69%}}.ecrits div{background-color:#2b886b}.ecrits a{color:black;text-decoration:none}.ecrits div:hover{background-color:#993a74}.ecrits a:hover{color:white}
+/*
+*Author : Diana Portela
+*Email : diana.portela@outlook.fr
+*SOMMAIRE 
+*1. Typographie
+*2. Bloc 1 : Image full size
+*3. Bloc 2 : Biographie
+*4. Bloc 3 : Parcours pictural
+*5. Bloc 4 : Ecrits
+*/
+
+/*============================ TYPOGRAPHIE ============================*/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+Sélecteur {
+    font-family: 'Dosis', sans-serif;
+}
+
+/* Appliquer la typographie à l'ensemble de la page */
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+/* H1, H2, p et a sur l'ensemble de la page */
+* h1 {
+    font-size: 40px;
+}
+
+* h2 {
+    font-size: 25px;
+}
+
+* p {
+    font-size: 15px;
+}
+
+* a {
+    font-size: 15px;
+}
+
+/* H3 sur footer uniquement */
+footer h3 {
+    font-size: 20px;
+}
+
+
+/*============================ BLOC 1 : Image full size ============================*/
+
+.imgfullsize img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover; /* rogner */
+}
+
+
+/*============================ BLOC 2 : Biographie ============================*/
+
+/* Position */
+.biographie {
+    text-align: center; /* centrage horizontal général */
+}
+
+.biographie div {
+    display: inline-block; /* alignement horizontal */
+    vertical-align: middle; /* centrage vertical général */
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.biographie .column1 {
+    width: 20%; /* répartition des colonnes */
+
+}
+
+.biographie .column2 {
+    width: 45%; /* répartition des colonnes */
+    text-align: justify; /* centrage horizontal texte */
+}
+
+
+/* Responsive column1 */
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column1 {
+        display: inline; /* supprimer aligement horizontal pour revenir à la ligne */
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column1 img {
+        margin-top: 100px; /* car margin div globale non applicable */
+ }
+}
+
+/* Responsive column2 */
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column2 {
+        display: inline; /* supprimer aligement horizontal pour revenir à la ligne */
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column2 p {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+ }
+}
+
+@media screen and (max-width:1200px) { /* écrans < 1200px */
+    .biographie .column2 a {
+        margin-bottom: 100px; /* car margin div globale non applicable */
+ }
+}
+
+
+/* Style photo GC (bordure) */
+.biographie .column1 img {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #2B886B;
+}
+
+
+/* Style bouton "Lire la suite" */
+.bouton {
+    display: inline-block; /* la balise de lien est une balise de type
+inline, on ne pourra pas lui mettre de marges ou de dimensions si on ne la
+transforme pas */
+
+    color: #993A74;
+    text-decoration: none;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #993A74;  
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.bouton:hover {
+    color: white;
+    background-color: #993A74;
+}
+
+
+/*============================ BLOC 3 : Parcours pictural ============================*/
+
+/* Position */
+.parcourspictural {
+    text-align: center; /* centrage horizontal texte */
+    line-height: 150px; /* centrage vertical texte */
+}
+
+.parcourspictural div {
+    height: 150px;
+    max-width: 69%;
+
+    margin:0 auto;
+    margin-bottom: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width:1000px) { /* écrans < 1000px */
+    .parcourspictural div {
+        margin-bottom: 100px;
+ }
+}
+
+/* Style parcours pictural */
+.parcourspictural div {
+    background-image: url('../../bundles/core/Images/2.jpg');
+}
+
+.parcourspictural a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.parcourspictural div:hover {
+    background-image: none;
+    background-color: #993A74;
+}
+
+.parcourspictural a:hover {
+    color: white;
+}
+
+
+/*============================ BLOC 4 : Ecrits ============================*/
+
+/* Position */
+.ecrits {
+    text-align: center; /* centrage horizontal texte */
+    line-height: 100px; /* centrage vertical texte */
+}
+
+.ecrits div {
+    display: inline-block; /* alignement horizontal */
+
+    height: 150px;
+    width: 21%;
+
+    margin-left:20px;
+    margin-right:20px;
+
+    margin-bottom: 100px;
+}
+
+
+/* Responsive */
+@media screen and (max-width:1000px) { /* écrans < 1000px */
+    .ecrits div {
+        width:69%;
+ }
+}
+
+
+/* Style ecrits */
+.ecrits div {
+    background-color: #2B886B;
+}
+
+.ecrits a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.ecrits div:hover {
+    background-color: #993A74;
+}
+
+.ecrits a:hover {
+    color: white;
+}
