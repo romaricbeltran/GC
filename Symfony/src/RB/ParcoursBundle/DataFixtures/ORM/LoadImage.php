@@ -526,6 +526,11 @@ implements OrderedFixtureInterface
                 }
         }
 
+        $image16 = new Image();
+        $image16->setChemin('85.jpg');
+        $image16->setAlt('');
+        $manager->persist($image16);
+
         //on enregistre tout
         $manager->flush();
     }

@@ -1,5 +1,8 @@
 {# Boucle du menu footer #}
 
 {% for periode in periodes %}
+{#
     <a href="{{ path('RB_parcours_vue_periode', {'id': periode.id}) }}"> {{ periode.titre }} </a> </br>
+#}
+    <a href="{{ asset('bundles/rbparcours/images/periode' ~ periode.id ~ '.pdf')}}"> {{ periode.titre }} </a> </br>
 {% endfor %}
